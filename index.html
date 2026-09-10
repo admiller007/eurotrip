@@ -1,0 +1,968 @@
+<title>Twelve Days Eastward</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+
+<style>
+  /* ---------- tokens: light is the base, both themes defined here ---------- */
+  :root {
+    --paper:      #E9EBE7;
+    --stock:      #F7F8F5;
+    --stock-alt:  #E1E5DF;
+    --ink:        #141E1C;
+    --ink-soft:   #3C4B48;
+    --muted:      #5B6A66;
+    --rule:       #C3CCC6;
+    --rule-soft:  #D6DDD8;
+    --accent:     #0E5551;
+    --accent-ink: #F7F8F5;
+    --stamp:      #B8432C;
+
+    --f-sign: "Archivo Narrow", "Helvetica Neue", Arial, sans-serif;
+    --f-read: "Newsreader", Georgia, "Times New Roman", serif;
+    --f-data: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+    --gutter: clamp(1rem, 4vw, 3rem);
+    --measure: 63ch;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:      #0F1513;
+      --stock:      #18201E;
+      --stock-alt:  #212A27;
+      --ink:        #E7EBE8;
+      --ink-soft:   #C3CDC9;
+      --muted:      #92A29D;
+      --rule:       #33403C;
+      --rule-soft:  #263130;
+      --accent:     #6BC4B9;
+      --accent-ink: #0F1513;
+      --stamp:      #E58265;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:      #0F1513;
+    --stock:      #18201E;
+    --stock-alt:  #212A27;
+    --ink:        #E7EBE8;
+    --ink-soft:   #C3CDC9;
+    --muted:      #92A29D;
+    --rule:       #33403C;
+    --rule-soft:  #263130;
+    --accent:     #6BC4B9;
+    --accent-ink: #0F1513;
+    --stamp:      #E58265;
+  }
+
+  /* ---------- base ---------- */
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--f-read);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    padding-inline: var(--gutter);
+    padding-block: clamp(2.5rem, 6vw, 5rem) 4rem;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 68rem;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(3rem, 7vw, 5.5rem);
+  }
+
+  h1, h2, h3 { text-wrap: balance; margin: 0; }
+  p { margin: 0; }
+
+  .mono {
+    font-family: var(--f-data);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .eyebrow {
+    font-family: var(--f-data);
+    font-size: .6875rem;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  a { color: var(--accent); }
+  a:focus-visible,
+  summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* ---------- masthead ---------- */
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .masthead h1 {
+    font-family: var(--f-sign);
+    font-weight: 700;
+    font-size: clamp(2.75rem, 11vw, 6rem);
+    line-height: .92;
+    letter-spacing: -.015em;
+    text-transform: uppercase;
+  }
+
+  .masthead h1 .east {
+    color: var(--accent);
+    display: block;
+  }
+
+  .dek {
+    font-size: clamp(1.0625rem, 2.2vw, 1.3125rem);
+    line-height: 1.55;
+    max-width: var(--measure);
+    color: var(--ink-soft);
+    font-weight: 300;
+  }
+
+  /* ---------- route strip ---------- */
+  .route {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: .25rem .5rem;
+    padding-block: 1.125rem;
+    border-block: 1px solid var(--rule);
+  }
+
+  .stop {
+    display: flex;
+    align-items: baseline;
+    gap: .5rem;
+  }
+
+  .stop code {
+    font-family: var(--f-data);
+    font-weight: 600;
+    font-size: .9375rem;
+    letter-spacing: .06em;
+    color: var(--ink);
+  }
+
+  .stop .city {
+    font-family: var(--f-sign);
+    font-size: .8125rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--muted);
+  }
+
+  .stop-arrow {
+    font-family: var(--f-data);
+    color: var(--rule);
+    font-size: .9375rem;
+    align-self: center;
+  }
+
+  /* ---------- stats ---------- */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+    gap: 1.75rem 1rem;
+  }
+
+  .stat dt {
+    font-family: var(--f-data);
+    font-size: .625rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: .25rem;
+  }
+
+  .stat dd {
+    margin: 0;
+    font-family: var(--f-sign);
+    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .stat dd span {
+    font-size: .875rem;
+    font-weight: 500;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    margin-left: .25rem;
+  }
+
+  /* ---------- legs ---------- */
+  .legs {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(3rem, 7vw, 5rem);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: leg;
+  }
+
+  .leg {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* the ticket: header band + perforation + data strip */
+  .ticket {
+    background: var(--stock);
+    border: 1px solid var(--rule);
+  }
+
+  .ticket-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: .75rem 1.5rem;
+    padding: 1.25rem clamp(1rem, 3vw, 1.75rem);
+  }
+
+  .leg-name {
+    display: flex;
+    align-items: baseline;
+    gap: .875rem;
+    flex-wrap: wrap;
+  }
+
+  .leg-no {
+    font-family: var(--f-data);
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    color: var(--accent-ink);
+    background: var(--accent);
+    padding: .3rem .5rem .25rem;
+  }
+
+  .leg-name h2 {
+    font-family: var(--f-sign);
+    font-weight: 700;
+    font-size: clamp(1.875rem, 5.5vw, 2.75rem);
+    line-height: 1;
+    letter-spacing: -.01em;
+    text-transform: uppercase;
+  }
+
+  .leg-dates {
+    font-family: var(--f-data);
+    font-size: .8125rem;
+    letter-spacing: .04em;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  /* perforated tear line with notches at both edges */
+  .perf {
+    position: relative;
+    height: 1px;
+    background-image: repeating-linear-gradient(
+      to right,
+      var(--rule) 0 6px,
+      transparent 6px 12px
+    );
+  }
+
+  .perf::before,
+  .perf::after {
+    content: "";
+    position: absolute;
+    top: -6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+  }
+  .perf::before { left: -7px; }
+  .perf::after  { right: -7px; }
+
+  .ticket-data {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+    gap: 1.125rem 1.5rem;
+    padding: 1.25rem clamp(1rem, 3vw, 1.75rem);
+  }
+
+  .field dt {
+    font-family: var(--f-data);
+    font-size: .625rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: .2rem;
+  }
+
+  .field dd {
+    margin: 0;
+    font-family: var(--f-data);
+    font-size: .9375rem;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    word-break: break-word;
+  }
+
+  /* ---------- narrative + log ---------- */
+  .leg-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: clamp(1.75rem, 4vw, 3rem);
+    align-items: start;
+  }
+
+  @media (max-width: 46rem) {
+    .leg-body { grid-template-columns: 1fr; }
+  }
+
+  .narrative {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+    max-width: var(--measure);
+  }
+
+  .narrative p:first-of-type::first-letter {
+    font-family: var(--f-sign);
+    font-weight: 700;
+    font-size: 3.25em;
+    line-height: .82;
+    float: left;
+    margin: .06em .12em 0 0;
+    color: var(--accent);
+  }
+
+  /* the log: a real chronology, so it's typed by time */
+  .log {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--rule);
+  }
+
+  .log h3 {
+    font-family: var(--f-data);
+    font-size: .625rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+    padding-block: .75rem;
+  }
+
+  .entry {
+    display: grid;
+    grid-template-columns: 5.25rem minmax(0, 1fr);
+    gap: 0 1rem;
+    padding-block: .875rem;
+    border-top: 1px solid var(--rule-soft);
+  }
+
+  .entry-when {
+    font-family: var(--f-data);
+    font-size: .75rem;
+    letter-spacing: .02em;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+    padding-top: .2rem;
+  }
+
+  .entry-what {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+  }
+
+  .entry-what b {
+    font-family: var(--f-sign);
+    font-weight: 600;
+    font-size: 1.0625rem;
+    letter-spacing: .005em;
+  }
+
+  .entry-what small {
+    font-size: .875rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* ---------- contact sheet ---------- */
+  .sheet-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: .5rem 1rem;
+    padding-bottom: .625rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 1rem;
+  }
+
+  .sheet {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+    gap: .75rem;
+  }
+
+  .frame {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  .frame .well {
+    aspect-ratio: 4 / 3;
+    max-width: 100%;
+    background:
+      repeating-linear-gradient(
+        135deg,
+        var(--stock) 0 9px,
+        var(--stock-alt) 9px 18px
+      );
+    border: 1px solid var(--rule);
+    display: grid;
+    place-items: center;
+  }
+
+  .frame .well span {
+    font-family: var(--f-data);
+    font-size: .625rem;
+    letter-spacing: .14em;
+    color: var(--muted);
+    background: var(--stock);
+    padding: .2rem .45rem;
+    border: 1px solid var(--rule);
+  }
+
+  .frame figcaption {
+    font-family: var(--f-data);
+    font-size: .6875rem;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+
+  .frame img {
+    aspect-ratio: 4 / 3;
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid var(--rule);
+    display: block;
+  }
+
+  /* ---------- closing ---------- */
+  .colophon {
+    border-top: 1px solid var(--rule);
+    padding-top: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: var(--measure);
+  }
+
+  .colophon h2 {
+    font-family: var(--f-sign);
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+
+  .colophon p {
+    font-size: .9375rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .stamp {
+    align-self: flex-start;
+    font-family: var(--f-data);
+    font-size: .6875rem;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--stamp);
+    border: 2px solid var(--stamp);
+    padding: .45rem .7rem .4rem;
+    transform: rotate(-2.5deg);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">23 August – 3 September 2026 · Aaron Miller</p>
+    <h1>Twelve Days <span class="east">Eastward</span></h1>
+    <p class="dek">
+      One long push east from Chicago and then a slow walk back down the map:
+      four nights in Paris, a hop over the Alps to Florence, a fast train to Rome
+      for Shabbat in the Ghetto, and a 5:30 a.m. flight to Tel Aviv. Here is the
+      whole route, stop by stop, with the tickets that got me there.
+    </p>
+
+    <nav class="route" aria-label="Route">
+      <span class="stop"><code>ORD</code><span class="city">Chicago</span></span>
+      <span class="stop-arrow" aria-hidden="true">→</span>
+      <span class="stop"><code>CDG</code><span class="city">Paris</span></span>
+      <span class="stop-arrow" aria-hidden="true">→</span>
+      <span class="stop"><code>FLR</code><span class="city">Florence</span></span>
+      <span class="stop-arrow" aria-hidden="true">→</span>
+      <span class="stop"><code>ROM</code><span class="city">Rome</span></span>
+      <span class="stop-arrow" aria-hidden="true">→</span>
+      <span class="stop"><code>TLV</code><span class="city">Tel Aviv</span></span>
+      <span class="stop-arrow" aria-hidden="true">→</span>
+      <span class="stop"><code>ORD</code><span class="city">Home</span></span>
+    </nav>
+
+    <dl class="stats">
+      <div class="stat"><dt>Duration</dt><dd>12 <span>days</span></dd></div>
+      <div class="stat"><dt>Countries</dt><dd>4</dd></div>
+      <div class="stat"><dt>Cities</dt><dd>5</dd></div>
+      <div class="stat"><dt>Flights</dt><dd>4</dd></div>
+      <div class="stat"><dt>Trains</dt><dd>1</dd></div>
+      <div class="stat"><dt>Aeroplan</dt><dd>115k <span>pts</span></dd></div>
+    </dl>
+  </header>
+
+  <ol class="legs">
+
+    <!-- ============ LEG 1 · PARIS ============ -->
+    <li class="leg">
+      <div class="ticket">
+        <div class="ticket-head">
+          <div class="leg-name">
+            <span class="leg-no">LEG 01</span>
+            <h2>Paris</h2>
+          </div>
+          <span class="leg-dates">SUN 23 AUG – WED 26 AUG</span>
+        </div>
+        <div class="perf" role="presentation"></div>
+        <dl class="ticket-data">
+          <div class="field"><dt>Flight</dt><dd>UA 987</dd></div>
+          <div class="field"><dt>Route</dt><dd>ORD → CDG</dd></div>
+          <div class="field"><dt>Depart</dt><dd>23 AUG 18:10</dd></div>
+          <div class="field"><dt>Arrive</dt><dd>24 AUG 09:20</dd></div>
+          <div class="field"><dt>Aircraft</dt><dd>787-10</dd></div>
+          <div class="field"><dt>Block time</dt><dd>8h 10m</dd></div>
+          <div class="field"><dt>Record</dt><dd>BPFH7K</dd></div>
+        </dl>
+      </div>
+
+      <div class="leg-body">
+        <div class="narrative">
+          <p>
+            The overnight from O'Hare lands at Charles de Gaulle just after nine in the
+            morning, which is the cruelest and best way to arrive in Paris — you get a
+            whole extra day, you just have to stay upright for it. Terminal 1, a train
+            into the city, and then straight into it.
+          </p>
+          <p>
+            Two full days, run hard. The Louvre in a small group with reserved access,
+            which is the only sane way to see the Mona Lisa in August. Then out to
+            Versailles the next morning on an electric bike — the gardens are enormous
+            and the bike is the difference between seeing the palace and seeing the
+            estate, hameau and all. Dinners both nights, and one very Parisian evening
+            at the Crazy Horse to close it out.
+          </p>
+        </div>
+
+        <div class="log">
+          <h3>Chronology</h3>
+          <div class="entry">
+            <span class="entry-when">MON 24<br>15:45</span>
+            <span class="entry-what">
+              <b>VIP Louvre &amp; Mona Lisa Tour</b>
+              <small>Small group, reserved access. Meeting at the Arc de Triomphe du Carrousel, Place du Carrousel.</small>
+            </span>
+          </div>
+          <div class="entry">
+            <span class="entry-when">MON 24<br>20:30</span>
+            <span class="entry-what">
+              <b>Dinner — Le Bazar</b>
+              <small>25 Avenue de l'Europe, Levallois-Perret. Outside on the terrasse.</small>
+            </span>
+          </div>
+          <div class="entry">
+            <span class="entry-when">TUE 25<br>12:15</span>
+            <span class="entry-what">
+              <b>Versailles by electric bike</b>
+              <small>Half day, including Marie Antoinette's hamlet.</small>
+            </span>
+          </div>
+          <div class="entry">
+            <span class="entry-when">TUE 25<br>20:00</span>
+            <span class="entry-what">
+              <b>Dinner — Safrane</b>
+              <small>1 bis Rue des Colonels Renard, 17th arrondissement.</small>
+            </span>
+          </div>
+          <div class="entry">
+            <span class="entry-when">TUE 25<br>later</span>
+            <span class="entry-what">
+              <b>Crazy Horse Paris</b>
+              <small>Avenue George V. Booked from the dinner table, which is the correct way to do it.</small>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <div class="sheet-head">
+          <h3 class="eyebrow">Contact sheet — Paris</h3>
+          <span class="eyebrow">PAR / 6 frames</span>
+        </div>
+        <div class="sheet">
+          <figure class="frame"><div class="well"><span>PAR-01</span></div><figcaption>Arrival, CDG Terminal 1</figcaption></figure>
+          <figure class="frame"><div class="well"><span>PAR-02</span></div><figcaption>The Louvre, reserved access</figcaption></figure>
+          <figure class="frame"><div class="well"><span>PAR-03</span></div><figcaption>Place du Carrousel</figcaption></figure>
+          <figure class="frame"><div class="well"><span>PAR-04</span></div><figcaption>Versailles, the gardens</figcaption></figure>
+          <figure class="frame"><div class="well"><span>PAR-05</span></div><figcaption>Marie Antoinette's hamlet</figcaption></figure>
+          <figure class="frame"><div class="well"><span>PAR-06</span></div><figcaption>Dinner on the terrasse</figcaption></figure>
+        </div>
+      </section>
+    </li>
+
+    <!-- ============ LEG 2 · FLORENCE ============ -->
+    <li class="leg">
+      <div class="ticket">
+        <div class="ticket-head">
+          <div class="leg-name">
+            <span class="leg-no">LEG 02</span>
+            <h2>Florence</h2>
+          </div>
+          <span class="leg-dates">WED 26 AUG – FRI 28 AUG</span>
+        </div>
+        <div class="perf" role="presentation"></div>
+        <dl class="ticket-data">
+          <div class="field"><dt>Flight</dt><dd>VY 1503</dd></div>
+          <div class="field"><dt>Route</dt><dd>ORY → FLR</dd></div>
+          <div class="field"><dt>Depart</dt><dd>26 AUG 09:30</dd></div>
+          <div class="field"><dt>Arrive</dt><dd>26 AUG 11:20</dd></div>
+          <div class="field"><dt>Carrier</dt><dd>Vueling</dd></div>
+          <div class="field"><dt>Record</dt><dd>LMGZ6Q</dd></div>
+        </dl>
+      </div>
+
+      <div class="leg-body">
+        <div class="narrative">
+          <p>
+            Out of Orly rather than Charles de Gaulle, over the Alps, and down into
+            Florence before lunch. Florence airport is close enough to the centre that
+            you can be standing in front of a Renaissance facade an hour after landing,
+            which is exactly what happened.
+          </p>
+          <p>
+            The city runs on timed entry now, so the day was built around a 13:30 slot:
+            a 72-hour combined ticket for the Accademia and the Bargello. David in the
+            afternoon, then Donatello and the sculpture courts. Two nights, walking
+            distance to everything, and an early start on the third morning.
+          </p>
+        </div>
+
+        <div class="log">
+          <h3>Chronology</h3>
+          <div class="entry">
+            <span class="entry-when">WED 26<br>09:30</span>
+            <span class="entry-what">
+              <b>Paris Orly → Florence</b>
+              <small>Vueling VY 1503. Boarding passes the night before.</small>
+            </span>
+          </div>
+          <div class="entry">
+            <span class="entry-when">WED 26<br>13:30</span>
+            <span class="entry-what">
+              <b>Accademia + Bargello</b>
+              <small>Florentine State Museums, 72-hour combined ticket, timed entry at 13:30.</small>
+            </span>
+          </div>
+          <div class="entry">
+            <span class="entry-when">THU 27<br>all day</span>
+            <span class="entry-what">
+              <b>Florence on foot</b>
+              <small>The one unscheduled day of the trip, and the better for it.</small>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <div class="sheet-head">
+          <h3 class="eyebrow">Contact sheet — Florence</h3>
+          <span class="eyebrow">FLR / 6 frames</span>
+        </div>
+        <div class="sheet">
+          <figure class="frame"><div class="well"><span>FLR-01</span></div><figcaption>Over the Alps</figcaption></figure>
+          <figure class="frame"><div class="well"><span>FLR-02</span></div><figcaption>The Duomo</figcaption></figure>
+          <figure class="frame"><div class="well"><span>FLR-03</span></div><figcaption>Accademia — David</figcaption></figure>
+          <figure class="frame"><div class="well"><span>FLR-04</span></div><figcaption>The Bargello courtyard</figcaption></figure>
+          <figure class="frame"><div class="well"><span>FLR-05</span></div><figcaption>Ponte Vecchio</figcaption></figure>
+          <figure class="frame"><div class="well"><span>FLR-06</span></div><figcaption>Piazzale Michelangelo</figcaption></figure>
+        </div>
+      </section>
+    </li>
+
+    <!-- ============ LEG 3 · ROME ============ -->
+    <li class="leg">
+      <div class="ticket">
+        <div class="ticket-head">
+          <div class="leg-name">
+            <span class="leg-no">LEG 03</span>
+            <h2>Rome</h2>
+          </div>
+          <span class="leg-dates">FRI 28 AUG – MON 31 AUG</span>
+        </div>
+        <div class="perf" role="presentation"></div>
+        <dl class="ticket-data">
+          <div class="field"><dt>Service</dt><dd>Italo 8951</dd></div>
+          <div class="field"><dt>Route</dt><dd>Firenze S.M.N. → Roma</dd></div>
+          <div class="field"><dt>Depart</dt><dd>28 AUG 09:03</dd></div>
+          <div class="field"><dt>Arrive</dt><dd>28 AUG 11:05</dd></div>
+          <div class="field"><dt>Coach / seat</dt><dd>6 / 77</dd></div>
+          <div class="field"><dt>Class</dt><dd>Ambience Smart</dd></div>
+          <div class="field"><dt>Ticket</dt><dd>IYG5JI</dd></div>
+        </dl>
+      </div>
+
+      <div class="leg-body">
+        <div class="narrative">
+          <p>
+            Two hours and two minutes, Florence to Rome, at nine in the morning. The
+            Italo is the good way to do this — you leave one Renaissance city after
+            breakfast and you're in an imperial one before noon, and the Tuscan
+            countryside goes by the window at 300 kilometres an hour.
+          </p>
+          <p>
+            It was a Friday, which set the shape of the whole stay. Into Termini before
+            lunch, settled by the afternoon, and then down to the Portico d'Ottavia for
+            Shabbat dinner in the Jewish Ghetto — a neighbourhood that has been doing
+            exactly this in exactly this place for two thousand years. Rome for the
+            weekend, and then the earliest alarm of the trip.
+          </p>
+        </div>
+
+        <div class="log">
+          <h3>Chronology</h3>
+          <div class="entry">
+            <span class="entry-when">FRI 28<br>09:03</span>
+            <span class="entry-what">
+              <b>Florence → Rome by rail</b>
+              <small>Italo 8951, coach 6, seat 77. Into Roma Termini at 11:05.</small>
+            </span>
+          </div>
+          <div class="entry">
+            <span class="entry-when">FRI 28<br>19:30</span>
+            <span class="entry-what">
+              <b>Shabbat dinner — Ba' Ghetto</b>
+              <small>Via del Portico d'Ottavia 57, in the Jewish Ghetto. Glatt kosher.</small>
+            </span>
+          </div>
+          <div class="entry">
+            <span class="entry-when">SAT–SUN<br>29–30</span>
+            <span class="entry-what">
+              <b>Rome for the weekend</b>
+              <small>Shabbat in the Ghetto, then the city.</small>
+            </span>
+          </div>
+          <div class="entry">
+            <span class="entry-when">MON 31<br>03:00</span>
+            <span class="entry-what">
+              <b>Out to Fiumicino</b>
+              <small>For an 05:30 departure. No one enjoyed this part.</small>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <div class="sheet-head">
+          <h3 class="eyebrow">Contact sheet — Rome</h3>
+          <span class="eyebrow">ROM / 6 frames</span>
+        </div>
+        <div class="sheet">
+          <figure class="frame"><div class="well"><span>ROM-01</span></div><figcaption>Tuscany at speed</figcaption></figure>
+          <figure class="frame"><div class="well"><span>ROM-02</span></div><figcaption>Roma Termini</figcaption></figure>
+          <figure class="frame"><div class="well"><span>ROM-03</span></div><figcaption>Portico d'Ottavia</figcaption></figure>
+          <figure class="frame"><div class="well"><span>ROM-04</span></div><figcaption>Shabbat table, the Ghetto</figcaption></figure>
+          <figure class="frame"><div class="well"><span>ROM-05</span></div><figcaption>The Colosseum</figcaption></figure>
+          <figure class="frame"><div class="well"><span>ROM-06</span></div><figcaption>Trastevere after dark</figcaption></figure>
+        </div>
+      </section>
+    </li>
+
+    <!-- ============ LEG 4 · ISRAEL ============ -->
+    <li class="leg">
+      <div class="ticket">
+        <div class="ticket-head">
+          <div class="leg-name">
+            <span class="leg-no">LEG 04</span>
+            <h2>Israel</h2>
+          </div>
+          <span class="leg-dates">MON 31 AUG – THU 3 SEP</span>
+        </div>
+        <div class="perf" role="presentation"></div>
+        <dl class="ticket-data">
+          <div class="field"><dt>Flight</dt><dd>W4 6041</dd></div>
+          <div class="field"><dt>Route</dt><dd>FCO T3 → TLV</dd></div>
+          <div class="field"><dt>Depart</dt><dd>31 AUG 05:30</dd></div>
+          <div class="field"><dt>Arrive</dt><dd>31 AUG 10:00</dd></div>
+          <div class="field"><dt>Seat</dt><dd>31A</dd></div>
+          <div class="field"><dt>Entry</dt><dd>ETA-IL approved</dd></div>
+          <div class="field"><dt>Record</dt><dd>PSH5HK</dd></div>
+        </dl>
+      </div>
+
+      <div class="leg-body">
+        <div class="narrative">
+          <p>
+            A 05:30 departure out of Fiumicino Terminal 3, seat 31A, wheels down at Ben
+            Gurion at ten in the morning. Four and a half hours from the Roman Ghetto to
+            Tel Aviv, which is a strange and good thing to think about at that altitude —
+            the same story, the two ends of it, one morning apart.
+          </p>
+          <p>
+            Three days at the far end of the map, and the real reason the whole route
+            bent east in the first place. Everything before this was the long way round.
+          </p>
+        </div>
+
+        <div class="log">
+          <h3>Chronology</h3>
+          <div class="entry">
+            <span class="entry-when">MON 31<br>05:30</span>
+            <span class="entry-what">
+              <b>Rome → Tel Aviv</b>
+              <small>Wizz Air W4 6041 out of Fiumicino Terminal 3.</small>
+            </span>
+          </div>
+          <div class="entry">
+            <span class="entry-when">MON 31<br>10:00</span>
+            <span class="entry-what">
+              <b>Ben Gurion</b>
+              <small>ETA-IL approved in advance, which made the arrival painless.</small>
+            </span>
+          </div>
+          <div class="entry">
+            <span class="entry-when">31 AUG –<br>2 SEP</span>
+            <span class="entry-what">
+              <b>Israel</b>
+              <small>Three days. The part of the trip that wasn't about the tickets.</small>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <div class="sheet-head">
+          <h3 class="eyebrow">Contact sheet — Israel</h3>
+          <span class="eyebrow">TLV / 8 frames</span>
+        </div>
+        <div class="sheet">
+          <figure class="frame"><div class="well"><span>TLV-01</span></div><figcaption>Dawn at Fiumicino</figcaption></figure>
+          <figure class="frame"><div class="well"><span>TLV-02</span></div><figcaption>Coming in over the coast</figcaption></figure>
+          <figure class="frame"><div class="well"><span>TLV-03</span></div><figcaption>Ben Gurion</figcaption></figure>
+          <figure class="frame"><div class="well"><span>TLV-04</span></div><figcaption>Tel Aviv</figcaption></figure>
+          <figure class="frame"><div class="well"><span>TLV-05</span></div><figcaption>The Mediterranean</figcaption></figure>
+          <figure class="frame"><div class="well"><span>TLV-06</span></div><figcaption>Jerusalem</figcaption></figure>
+          <figure class="frame"><div class="well"><span>TLV-07</span></div><figcaption>The Old City</figcaption></figure>
+          <figure class="frame"><div class="well"><span>TLV-08</span></div><figcaption>Family</figcaption></figure>
+        </div>
+      </section>
+    </li>
+
+    <!-- ============ LEG 5 · HOME ============ -->
+    <li class="leg">
+      <div class="ticket">
+        <div class="ticket-head">
+          <div class="leg-name">
+            <span class="leg-no">LEG 05</span>
+            <h2>Home</h2>
+          </div>
+          <span class="leg-dates">THU 3 SEP</span>
+        </div>
+        <div class="perf" role="presentation"></div>
+        <dl class="ticket-data">
+          <div class="field"><dt>Flight</dt><dd>LX 8</dd></div>
+          <div class="field"><dt>Route</dt><dd>ZRH → ORD T5</dd></div>
+          <div class="field"><dt>Depart</dt><dd>3 SEP 13:05</dd></div>
+          <div class="field"><dt>Arrive</dt><dd>3 SEP 15:55</dd></div>
+          <div class="field"><dt>Aircraft</dt><dd>777-300ER</dd></div>
+          <div class="field"><dt>Cabin / seat</dt><dd>Business / 07K</dd></div>
+          <div class="field"><dt>Gate</dt><dd>E23</dd></div>
+          <div class="field"><dt>Record</dt><dd>ACKRAO</dd></div>
+        </dl>
+      </div>
+
+      <div class="leg-body">
+        <div class="narrative">
+          <p>
+            Home the long way, back through Europe: Zurich to Chicago, gate E23, nine
+            hours and fifty minutes in seat 07K, and the clock running backwards the
+            whole way. Depart Zurich at one in the afternoon, land at O'Hare Terminal 5
+            at four — the one flight on the trip that gives the day back instead of
+            taking it.
+          </p>
+          <p>
+            Twelve days, four countries, five cities, and one ticket book's worth of
+            proof that it happened.
+          </p>
+        </div>
+
+        <div class="log">
+          <h3>Chronology</h3>
+          <div class="entry">
+            <span class="entry-when">THU 3<br>13:05</span>
+            <span class="entry-what">
+              <b>Zurich → Chicago</b>
+              <small>SWISS LX 8, Boeing 777-300ER, gate E23.</small>
+            </span>
+          </div>
+          <div class="entry">
+            <span class="entry-when">THU 3<br>15:55</span>
+            <span class="entry-what">
+              <b>O'Hare, Terminal 5</b>
+              <small>Nine hours and fifty minutes in the air, two hours and fifty on the clock.</small>
+            </span>
+          </div>
+        </div>
+      </div>
+    </li>
+
+  </ol>
+
+  <footer class="colophon">
+    <span class="stamp">Route completed</span>
+    <h2>About this page</h2>
+    <p>
+      Every flight number, ticket code, seat and time on this page is taken from the
+      actual booking confirmations. The photo frames are placeholders, sized and
+      captioned and waiting — drop the real pictures in and they'll fall straight
+      into the contact sheets.
+    </p>
+    <p class="mono" style="font-size:.6875rem; letter-spacing:.06em;">
+      ORD · CDG · ORY · FLR · FCO · TLV · ZRH · ORD — AUG–SEP 2026
+    </p>
+  </footer>
+
+</div>
