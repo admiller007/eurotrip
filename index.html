@@ -322,6 +322,26 @@
     word-break: break-word;
   }
 
+  /* the stub: where you slept, torn off below the transit record */
+  .ticket-stay {
+    background: var(--stock-alt);
+    padding: 1.125rem clamp(1rem, 3vw, 1.75rem) 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .875rem;
+  }
+
+  .stay-label {
+    font-family: var(--f-data);
+    font-size: .625rem;
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .ticket-stay .ticket-data { padding: 0; }
+
   /* ---------- narrative + log ---------- */
   .leg-body {
     display: grid;
@@ -568,6 +588,17 @@
           <div class="field"><dt>Block time</dt><dd>8h 10m</dd></div>
           <div class="field"><dt>Record</dt><dd>BPFH7K</dd></div>
         </dl>
+        <div class="perf" role="presentation"></div>
+        <div class="ticket-stay">
+          <p class="stay-label">Stay</p>
+          <dl class="ticket-data">
+            <div class="field"><dt>Host</dt><dd>Xavier</dd></div>
+            <div class="field"><dt>Nights</dt><dd>2</dd></div>
+            <div class="field"><dt>Where</dt><dd>Pompidou / Bastille</dd></div>
+            <div class="field"><dt>Check-in</dt><dd>24 AUG after 15:00</dd></div>
+            <div class="field"><dt>Checkout</dt><dd>26 AUG before 11:00</dd></div>
+          </dl>
+        </div>
       </div>
 
       <div class="leg-body">
@@ -576,7 +607,8 @@
             The overnight from O'Hare lands at Charles de Gaulle just after nine in the
             morning, which is the cruelest and best way to arrive in Paris — you get a
             whole extra day, you just have to stay upright for it. Terminal 1, a train
-            into the city, and then straight into it.
+            into the city, keys to an apartment between the Pompidou and Bastille,
+            and then straight into it.
           </p>
           <p>
             Two full days, run hard. The Louvre in a small group with reserved access,
@@ -663,6 +695,17 @@
           <div class="field"><dt>Carrier</dt><dd>Vueling</dd></div>
           <div class="field"><dt>Record</dt><dd>LMGZ6Q</dd></div>
         </dl>
+        <div class="perf" role="presentation"></div>
+        <div class="ticket-stay">
+          <p class="stay-label">Stay</p>
+          <dl class="ticket-data">
+            <div class="field"><dt>Host</dt><dd>Lorenzo</dd></div>
+            <div class="field"><dt>Nights</dt><dd>2</dd></div>
+            <div class="field"><dt>Where</dt><dd>By the Fortezza da Basso</dd></div>
+            <div class="field"><dt>Check-in</dt><dd>26 AUG after 15:00</dd></div>
+            <div class="field"><dt>Checkout</dt><dd>28 AUG before 10:00</dd></div>
+          </dl>
+        </div>
       </div>
 
       <div class="leg-body">
@@ -676,8 +719,14 @@
           <p>
             The city runs on timed entry now, so the day was built around a 13:30 slot:
             a 72-hour combined ticket for the Accademia and the Bargello. David in the
-            afternoon, then Donatello and the sculpture courts. Two nights, walking
-            distance to everything, and an early start on the third morning.
+            afternoon, then Donatello and the sculpture courts.
+          </p>
+          <p>
+            And then, at five, out of the city entirely — e-bikes up into the hills, which
+            is where you finally understand the shape of the place. Florence sits in a
+            bowl, and from above at golden hour the whole Renaissance skyline is one
+            object: dome, tower, river, hills. Back down for dinner, a free day after
+            that, and an early start on the third morning.
           </p>
         </div>
 
@@ -698,6 +747,13 @@
             </span>
           </div>
           <div class="entry">
+            <span class="entry-when">WED 26<br>17:00</span>
+            <span class="entry-what">
+              <b>E-bikes through the Florentine hills</b>
+              <small>Two hours out of the city with Gabriele, back down at golden hour.</small>
+            </span>
+          </div>
+          <div class="entry">
             <span class="entry-when">THU 27<br>all day</span>
             <span class="entry-what">
               <b>Florence on foot</b>
@@ -710,7 +766,7 @@
       <section>
         <div class="sheet-head">
           <h3 class="eyebrow">Contact sheet — Florence</h3>
-          <span class="eyebrow">FLR / 6 frames</span>
+          <span class="eyebrow">FLR / 7 frames</span>
         </div>
         <div class="sheet">
           <figure class="frame"><div class="well"><span>FLR-01</span></div><figcaption>Over the Alps</figcaption></figure>
@@ -719,6 +775,7 @@
           <figure class="frame"><div class="well"><span>FLR-04</span></div><figcaption>The Bargello courtyard</figcaption></figure>
           <figure class="frame"><div class="well"><span>FLR-05</span></div><figcaption>Ponte Vecchio</figcaption></figure>
           <figure class="frame"><div class="well"><span>FLR-06</span></div><figcaption>Piazzale Michelangelo</figcaption></figure>
+          <figure class="frame"><div class="well"><span>FLR-07</span></div><figcaption>The hills, on e-bikes</figcaption></figure>
         </div>
       </section>
     </li>
@@ -743,6 +800,16 @@
           <div class="field"><dt>Class</dt><dd>Ambience Smart</dd></div>
           <div class="field"><dt>Ticket</dt><dd>IYG5JI</dd></div>
         </dl>
+        <div class="perf" role="presentation"></div>
+        <div class="ticket-stay">
+          <p class="stay-label">Stay</p>
+          <dl class="ticket-data">
+            <div class="field"><dt>Host</dt><dd>Andrea</dd></div>
+            <div class="field"><dt>Nights</dt><dd>3</dd></div>
+            <div class="field"><dt>Check-in</dt><dd>28 AUG after 16:00</dd></div>
+            <div class="field"><dt>Checkout</dt><dd>31 AUG before 10:00</dd></div>
+          </dl>
+        </div>
       </div>
 
       <div class="leg-body">
@@ -755,8 +822,11 @@
           </p>
           <p>
             It was a Friday, which set the shape of the whole stay. Into Termini before
-            lunch, settled by the afternoon, and then down to the Portico d'Ottavia for
-            Shabbat dinner in the Jewish Ghetto — a neighbourhood that has been doing
+            lunch, and then straight onto the back of a Vespa for an hour and three
+            quarters through the city with a photographer riding along — the fastest
+            possible introduction to Rome, and the only way to cover that much of it
+            before Shabbat. Keys by five, and then down to the Portico d'Ottavia for
+            dinner in the Jewish Ghetto — a neighbourhood that has been doing
             exactly this in exactly this place for two thousand years. Rome for the
             weekend, and then the earliest alarm of the trip.
           </p>
@@ -769,6 +839,13 @@
             <span class="entry-what">
               <b>Florence → Rome by rail</b>
               <small>Italo 8951, coach 6, seat 77. Into Roma Termini at 11:05.</small>
+            </span>
+          </div>
+          <div class="entry">
+            <span class="entry-when">FRI 28<br>15:00</span>
+            <span class="entry-what">
+              <b>Vespa tour of Rome, with a photographer</b>
+              <small>Until 16:45, with Vahid. There are professional pictures from this one.</small>
             </span>
           </div>
           <div class="entry">
@@ -798,15 +875,16 @@
       <section>
         <div class="sheet-head">
           <h3 class="eyebrow">Contact sheet — Rome</h3>
-          <span class="eyebrow">ROM / 6 frames</span>
+          <span class="eyebrow">ROM / 7 frames</span>
         </div>
         <div class="sheet">
           <figure class="frame"><div class="well"><span>ROM-01</span></div><figcaption>Tuscany at speed</figcaption></figure>
           <figure class="frame"><div class="well"><span>ROM-02</span></div><figcaption>Roma Termini</figcaption></figure>
-          <figure class="frame"><div class="well"><span>ROM-03</span></div><figcaption>Portico d'Ottavia</figcaption></figure>
-          <figure class="frame"><div class="well"><span>ROM-04</span></div><figcaption>Shabbat table, the Ghetto</figcaption></figure>
-          <figure class="frame"><div class="well"><span>ROM-05</span></div><figcaption>The Colosseum</figcaption></figure>
-          <figure class="frame"><div class="well"><span>ROM-06</span></div><figcaption>Trastevere after dark</figcaption></figure>
+          <figure class="frame"><div class="well"><span>ROM-03</span></div><figcaption>On the Vespa — shot by Vahid</figcaption></figure>
+          <figure class="frame"><div class="well"><span>ROM-04</span></div><figcaption>Portico d'Ottavia</figcaption></figure>
+          <figure class="frame"><div class="well"><span>ROM-05</span></div><figcaption>Shabbat table, the Ghetto</figcaption></figure>
+          <figure class="frame"><div class="well"><span>ROM-06</span></div><figcaption>The Colosseum</figcaption></figure>
+          <figure class="frame"><div class="well"><span>ROM-07</span></div><figcaption>Trastevere after dark</figcaption></figure>
         </div>
       </section>
     </li>
