@@ -7,44 +7,33 @@ dependencies. Open it in a browser to view.
 
 ## Current state
 
-Complete except for photos. All 28 photo frames are captioned placeholders.
+Complete. All contact-sheet frames (Paris, Florence, Rome, Israel, plus a
+small 2-frame Home strip) hold real photos pulled from the Google Photos
+export, geo/time-matched to each leg and hand-picked for quality — see
+`photos/` and the `<figure>` markup in `index.html` for the final picks.
 
-## The one remaining job: photos
+Not photographed in this export: the Rome Vespa tour (Vahid) and the
+Florence hills e-bike ride are personal-camera-roll-only here — the
+professional shots from those two hosts are still in Airbnb Messages and
+would need pulling in separately if wanted.
 
-Each contact sheet holds `.frame` figures with a striped placeholder well:
+## Photo frames, for future edits
+
+Each contact sheet holds real `.frame` figures now:
 
 ```html
-<figure class="frame"><div class="well"><span>PAR-01</span></div><figcaption>Arrival, CDG Terminal 1</figcaption></figure>
+<figure class="frame"><img src="photos/par-01.jpg" alt="Moving walkway in CDG Terminal 1"><figcaption>The walkway in, CDG Terminal 1</figcaption></figure>
 ```
 
-To fill one, swap the `.well` div for an `img` and keep the figcaption:
+`.frame img` is styled (4:3, `object-fit: cover`, same border the old wells
+had) so no CSS changes are needed to swap a photo. Images live in `photos/`,
+named `<leg>-<NN>.jpg` (e.g. `par-01.jpg`). Add or remove frames freely — the
+sheets are auto-fill grids — and keep each caption matched to what's
+actually in that photo, and the "N frames" count in each `.sheet-head`
+matched to the frame count.
 
-```html
-<figure class="frame"><img src="photos/par-01.jpg" alt="Arrival at CDG Terminal 1"><figcaption>Arrival, CDG Terminal 1</figcaption></figure>
-```
-
-`.frame img` is already styled (4:3, `object-fit: cover`, same border as the
-wells) so no CSS changes are needed. Put images in `photos/`.
-
-Frame slots: PAR-01…06, FLR-01…07, ROM-01…07, TLV-01…08.
-
-Captions are placeholders written from the itinerary, not from the actual
-images. **Look at each photo and rewrite its caption to match what is really
-in it.** Add or remove frames freely — the sheets are auto-fill grids, and
-the "N frames" count in each `.sheet-head` should be updated to match.
-
-### Photo source
-
-Google Photos, 23 Aug – 3 Sep 2026. Three days span two cities, so use
-timestamps to split them:
-
-- **26 Aug** — Paris until the ~09:30 Orly flight, Florence from 11:20
-- **28 Aug** — Florence until the 09:03 train, Rome from 11:05
-- **31 Aug** — Rome until the 05:30 flight, Israel from 10:00
-
-Two experiences were run by hosts who shoot photos — a Rome Vespa tour with
-a photographer (Vahid) and a Florence hills e-bike ride (Gabriele). Those
-sets may be in Airbnb Messages and are likely the best images available.
+If better shots turn up later (e.g. the Vespa/e-bike sets from Airbnb
+Messages), swap the `src`/`alt`/caption in place; there's no other wiring.
 
 ## Design
 

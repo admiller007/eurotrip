@@ -436,16 +436,62 @@
     margin-bottom: 1rem;
   }
 
+  /* ---------- carousel ---------- */
+  .carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+
   .sheet {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: .25rem;
+    padding-block: .25rem .75rem;
+    flex: 1 1 auto;
+    min-width: 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--rule) transparent;
+  }
+
+  .car-btn {
+    flex: none;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
-    gap: .75rem;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    border: 1px solid var(--rule);
+    background: var(--stock);
+    color: var(--ink);
+    font-family: var(--f-data);
+    font-size: 1.125rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .car-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  .car-btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  @media (max-width: 32rem) {
+    .car-btn { display: none; }
   }
 
   .frame {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: .625rem;
+    flex: 0 0 auto;
+    width: min(78vw, 24rem);
+    scroll-snap-align: start;
   }
 
   .frame .well {
@@ -474,7 +520,7 @@
 
   .frame figcaption {
     font-family: var(--f-data);
-    font-size: .6875rem;
+    font-size: .75rem;
     line-height: 1.45;
     color: var(--muted);
   }
@@ -663,15 +709,20 @@
       <section>
         <div class="sheet-head">
           <h3 class="eyebrow">Contact sheet — Paris</h3>
-          <span class="eyebrow">PAR / 6 frames</span>
+          <span class="eyebrow">PAR / 7 frames</span>
         </div>
-        <div class="sheet">
-          <figure class="frame"><div class="well"><span>PAR-01</span></div><figcaption>Arrival, CDG Terminal 1</figcaption></figure>
-          <figure class="frame"><div class="well"><span>PAR-02</span></div><figcaption>The Louvre, reserved access</figcaption></figure>
-          <figure class="frame"><div class="well"><span>PAR-03</span></div><figcaption>Place du Carrousel</figcaption></figure>
-          <figure class="frame"><div class="well"><span>PAR-04</span></div><figcaption>Versailles, the gardens</figcaption></figure>
-          <figure class="frame"><div class="well"><span>PAR-05</span></div><figcaption>Marie Antoinette's hamlet</figcaption></figure>
-          <figure class="frame"><div class="well"><span>PAR-06</span></div><figcaption>Dinner on the terrasse</figcaption></figure>
+        <div class="carousel">
+          <button class="car-btn car-prev" type="button" aria-label="Previous photo" onclick="scrollSheet(this,-1)">‹</button>
+          <div class="sheet">
+            <figure class="frame"><img src="photos/par-01.jpg" alt="Moving walkway in CDG Terminal 1" loading="lazy"><figcaption>The walkway in, CDG Terminal 1</figcaption></figure>
+            <figure class="frame"><img src="photos/par-02.jpg" alt="Selfie in front of the Louvre pyramid" loading="lazy"><figcaption>At the pyramid, the Louvre</figcaption></figure>
+            <figure class="frame"><img src="photos/par-03.jpg" alt="The Louvre courtyard at Place du Carrousel" loading="lazy"><figcaption>Place du Carrousel</figcaption></figure>
+            <figure class="frame"><img src="photos/par-04.jpg" alt="The Grand Canal at Versailles" loading="lazy"><figcaption>The Grand Canal, Versailles</figcaption></figure>
+            <figure class="frame"><img src="photos/par-05.jpg" alt="Selfie by the lake at Marie Antoinette's hamlet" loading="lazy"><figcaption>The lake, Marie Antoinette's hamlet</figcaption></figure>
+            <figure class="frame"><img src="photos/par-06.jpg" alt="A dish at Bazar restaurant in Levallois-Perret" loading="lazy"><figcaption>Dinner at Bazar</figcaption></figure>
+            <figure class="frame"><img src="photos/par-07.jpg" alt="Watching the show at the Crazy Horse cabaret" loading="lazy"><figcaption>Mid-show, Crazy Horse</figcaption></figure>
+          </div>
+          <button class="car-btn car-next" type="button" aria-label="Next photo" onclick="scrollSheet(this,1)">›</button>
         </div>
       </section>
     </li>
@@ -768,14 +819,18 @@
           <h3 class="eyebrow">Contact sheet — Florence</h3>
           <span class="eyebrow">FLR / 7 frames</span>
         </div>
-        <div class="sheet">
-          <figure class="frame"><div class="well"><span>FLR-01</span></div><figcaption>Over the Alps</figcaption></figure>
-          <figure class="frame"><div class="well"><span>FLR-02</span></div><figcaption>The Duomo</figcaption></figure>
-          <figure class="frame"><div class="well"><span>FLR-03</span></div><figcaption>Accademia — David</figcaption></figure>
-          <figure class="frame"><div class="well"><span>FLR-04</span></div><figcaption>The Bargello courtyard</figcaption></figure>
-          <figure class="frame"><div class="well"><span>FLR-05</span></div><figcaption>Ponte Vecchio</figcaption></figure>
-          <figure class="frame"><div class="well"><span>FLR-06</span></div><figcaption>Piazzale Michelangelo</figcaption></figure>
-          <figure class="frame"><div class="well"><span>FLR-07</span></div><figcaption>The hills, on e-bikes</figcaption></figure>
+        <div class="carousel">
+          <button class="car-btn car-prev" type="button" aria-label="Previous photo" onclick="scrollSheet(this,-1)">‹</button>
+          <div class="sheet">
+            <figure class="frame"><img src="photos/flr-01.jpg" alt="Bus across the tarmac at Florence airport" loading="lazy"><figcaption>Touching down, Florence airport</figcaption></figure>
+            <figure class="frame"><img src="photos/flr-02.jpg" alt="Looking up at the Duomo facade" loading="lazy"><figcaption>The Duomo facade</figcaption></figure>
+            <figure class="frame"><img src="photos/flr-03.jpg" alt="Michelangelo's David at the Accademia" loading="lazy"><figcaption>David, at the Accademia</figcaption></figure>
+            <figure class="frame"><img src="photos/flr-04.jpg" alt="The piazza by the Bargello tower" loading="lazy"><figcaption>The piazza, by the Bargello</figcaption></figure>
+            <figure class="frame"><img src="photos/flr-05.jpg" alt="Ponte Vecchio at dusk" loading="lazy"><figcaption>Ponte Vecchio at dusk</figcaption></figure>
+            <figure class="frame"><img src="photos/flr-06.jpg" alt="Florence skyline from Piazzale Michelangelo" loading="lazy"><figcaption>The skyline, from Piazzale Michelangelo</figcaption></figure>
+            <figure class="frame"><img src="photos/flr-07.jpg" alt="Selfie in a bike helmet in the Tuscan hills" loading="lazy"><figcaption>Helmet on, e-bike in the hills</figcaption></figure>
+          </div>
+          <button class="car-btn car-next" type="button" aria-label="Next photo" onclick="scrollSheet(this,1)">›</button>
         </div>
       </section>
     </li>
@@ -878,14 +933,18 @@
           <h3 class="eyebrow">Contact sheet — Rome</h3>
           <span class="eyebrow">ROM / 7 frames</span>
         </div>
-        <div class="sheet">
-          <figure class="frame"><div class="well"><span>ROM-01</span></div><figcaption>Tuscany at speed</figcaption></figure>
-          <figure class="frame"><div class="well"><span>ROM-02</span></div><figcaption>Roma Termini</figcaption></figure>
-          <figure class="frame"><div class="well"><span>ROM-03</span></div><figcaption>On the Vespa — shot by Vahid</figcaption></figure>
-          <figure class="frame"><div class="well"><span>ROM-04</span></div><figcaption>Portico d'Ottavia</figcaption></figure>
-          <figure class="frame"><div class="well"><span>ROM-05</span></div><figcaption>Shabbat table, the Ghetto</figcaption></figure>
-          <figure class="frame"><div class="well"><span>ROM-06</span></div><figcaption>The Colosseum</figcaption></figure>
-          <figure class="frame"><div class="well"><span>ROM-07</span></div><figcaption>Trastevere after dark</figcaption></figure>
+        <div class="carousel">
+          <button class="car-btn car-prev" type="button" aria-label="Previous photo" onclick="scrollSheet(this,-1)">‹</button>
+          <div class="sheet">
+            <figure class="frame"><img src="photos/rom-01.jpg" alt="Columns of the Temple of Castor and Pollux in the Roman Forum" loading="lazy"><figcaption>The Roman Forum</figcaption></figure>
+            <figure class="frame"><img src="photos/rom-02.jpg" alt="A Rome shopping street at golden hour" loading="lazy"><figcaption>A backstreet, golden hour</figcaption></figure>
+            <figure class="frame"><img src="photos/rom-03.jpg" alt="Bernini's elephant obelisk at Piazza della Minerva" loading="lazy"><figcaption>Bernini's elephant, Piazza della Minerva</figcaption></figure>
+            <figure class="frame"><img src="photos/rom-04.jpg" alt="Interior of the Great Synagogue of Rome" loading="lazy"><figcaption>Inside the Great Synagogue</figcaption></figure>
+            <figure class="frame"><img src="photos/rom-05.jpg" alt="A plate of pasta at Ba' Ghetto" loading="lazy"><figcaption>Shabbat dinner, Ba' Ghetto</figcaption></figure>
+            <figure class="frame"><img src="photos/rom-06.jpg" alt="The Colosseum" loading="lazy"><figcaption>The Colosseum</figcaption></figure>
+            <figure class="frame"><img src="photos/rom-07.jpg" alt="A table in a Trastevere wine bar at night" loading="lazy"><figcaption>Trastevere after dark</figcaption></figure>
+          </div>
+          <button class="car-btn car-next" type="button" aria-label="Next photo" onclick="scrollSheet(this,1)">›</button>
         </div>
       </section>
     </li>
@@ -955,17 +1014,20 @@
       <section>
         <div class="sheet-head">
           <h3 class="eyebrow">Contact sheet — Israel</h3>
-          <span class="eyebrow">TLV / 8 frames</span>
+          <span class="eyebrow">TLV / 7 frames</span>
         </div>
-        <div class="sheet">
-          <figure class="frame"><div class="well"><span>TLV-01</span></div><figcaption>Dawn at Fiumicino</figcaption></figure>
-          <figure class="frame"><div class="well"><span>TLV-02</span></div><figcaption>Coming in over the coast</figcaption></figure>
-          <figure class="frame"><div class="well"><span>TLV-03</span></div><figcaption>Ben Gurion</figcaption></figure>
-          <figure class="frame"><div class="well"><span>TLV-04</span></div><figcaption>Tel Aviv</figcaption></figure>
-          <figure class="frame"><div class="well"><span>TLV-05</span></div><figcaption>The Mediterranean</figcaption></figure>
-          <figure class="frame"><div class="well"><span>TLV-06</span></div><figcaption>Jerusalem</figcaption></figure>
-          <figure class="frame"><div class="well"><span>TLV-07</span></div><figcaption>The Old City</figcaption></figure>
-          <figure class="frame"><div class="well"><span>TLV-08</span></div><figcaption>Family</figcaption></figure>
+        <div class="carousel">
+          <button class="car-btn car-prev" type="button" aria-label="Previous photo" onclick="scrollSheet(this,-1)">‹</button>
+          <div class="sheet">
+            <figure class="frame"><img src="photos/tlv-01.jpg" alt="Boarding a Wizz Air flight at night at Fiumicino" loading="lazy"><figcaption>Boarding before dawn, Fiumicino</figcaption></figure>
+            <figure class="frame"><img src="photos/tlv-02.jpg" alt="A bright corridor in Ben Gurion Airport" loading="lazy"><figcaption>Ben Gurion, arrivals</figcaption></figure>
+            <figure class="frame"><img src="photos/tlv-03.jpg" alt="Holding pastries at a bakery counter" loading="lazy"><figcaption>The bakery counter</figcaption></figure>
+            <figure class="frame"><img src="photos/tlv-04.jpg" alt="The Western Wall lit up at night with the Dome of the Rock behind it" loading="lazy"><figcaption>The Western Wall, after dark</figcaption></figure>
+            <figure class="frame"><img src="photos/tlv-05.jpg" alt="Selfie on a Jerusalem street" loading="lazy"><figcaption>A Jerusalem street</figcaption></figure>
+            <figure class="frame"><img src="photos/tlv-06.jpg" alt="At an outdoor cafe with family" loading="lazy"><figcaption>Family, over coffee</figcaption></figure>
+            <figure class="frame"><img src="photos/tlv-07.jpg" alt="A child looking at the animals at the zoo" loading="lazy"><figcaption>A family day at the zoo</figcaption></figure>
+          </div>
+          <button class="car-btn car-next" type="button" aria-label="Next photo" onclick="scrollSheet(this,1)">›</button>
         </div>
       </section>
     </li>
@@ -1026,6 +1088,21 @@
           </div>
         </div>
       </div>
+
+      <section>
+        <div class="sheet-head">
+          <h3 class="eyebrow">Contact sheet — Home</h3>
+          <span class="eyebrow">HOME / 2 frames</span>
+        </div>
+        <div class="carousel">
+          <button class="car-btn car-prev" type="button" aria-label="Previous photo" onclick="scrollSheet(this,-1)">‹</button>
+          <div class="sheet">
+            <figure class="frame"><img src="photos/home-01.jpg" alt="A SWISS aircraft on the tarmac at Zurich airport" loading="lazy"><figcaption>SWISS on the tarmac, Zurich</figcaption></figure>
+            <figure class="frame"><img src="photos/home-02.jpg" alt="E.T. playing on the business class seatback screen" loading="lazy"><figcaption>E.T., seatback screen</figcaption></figure>
+          </div>
+          <button class="car-btn car-next" type="button" aria-label="Next photo" onclick="scrollSheet(this,1)">›</button>
+        </div>
+      </section>
     </li>
 
   </ol>
@@ -1035,9 +1112,8 @@
     <h2>About this page</h2>
     <p>
       Every flight number, ticket code, seat and time on this page is taken from the
-      actual booking confirmations. The photo frames are placeholders, sized and
-      captioned and waiting — drop the real pictures in and they'll fall straight
-      into the contact sheets.
+      actual booking confirmations, and every photo in the contact sheets is a real
+      frame from the trip, picked and captioned after the fact.
     </p>
     <p class="mono" style="font-size:.6875rem; letter-spacing:.06em;">
       ORD · CDG · ORY · FLR · FCO · TLV · ZRH · ORD — AUG–SEP 2026
@@ -1045,3 +1121,12 @@
   </footer>
 
 </div>
+
+<script>
+  function scrollSheet(btn, dir) {
+    var sheet = btn.parentElement.querySelector('.sheet');
+    var card = sheet.querySelector('.frame');
+    var amount = card ? card.getBoundingClientRect().width + 20 : sheet.clientWidth * 0.85;
+    sheet.scrollBy({ left: dir * amount, behavior: 'smooth' });
+  }
+</script>
