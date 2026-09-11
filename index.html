@@ -1,9 +1,6 @@
-<title>Twelve Days Eastward</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<!DOCTYPE html>
 
-<style>
+<html lang="en"><head><meta charset="utf-8"/><title>Twelve Days Eastward</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"/><style>
   /* ---------- tokens: light is the base, both themes defined here ---------- */
   :root {
     --paper:      #E9EBE7;
@@ -574,89 +571,62 @@
   @media (prefers-reduced-motion: reduce) {
     * { animation: none !important; transition: none !important; }
   }
-</style>
+</style><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="A photographic travel journal: twelve days from Chicago through Paris, Florence, Rome and Israel." name="description"/><meta content="Twelve Days Eastward" property="og:title"/><meta content="A journey in photographs, stories and ticket stubs." property="og:description"/><meta content="website" property="og:type"/><meta content="photos/web/skyline-1800.webp" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><style>body{margin:0;padding-top:0}button{font:inherit;color:inherit;cursor:pointer}a,button,summary{-webkit-tap-highlight-color:transparent}.skip-link{position:fixed;top:-5rem;left:1rem;z-index:30;background:var(--stock);padding:1rem}.skip-link:focus{top:1rem}.route{position:sticky;top:0;z-index:10;max-width:68rem;margin:0 auto 3rem;background:var(--paper);flex-wrap:nowrap;overflow-x:auto;gap:.25rem;padding:.65rem 0}.route a{flex:none;font-family:var(--f-sign);text-decoration:none;text-transform:uppercase;letter-spacing:.06em;padding:.6rem .9rem;border-radius:2px}.route a[aria-current]{background:var(--accent);color:var(--accent-ink)}.route a:hover{background:var(--stock-alt);color:var(--ink)}#journey,.leg{scroll-margin-top:5.5rem}.hero-photo,.chapter-photo{margin:0}.hero-photo img,.chapter-photo img{display:block;width:100%;height:auto;object-fit:cover}.hero-photo img{aspect-ratio:16/9;object-position:center 58%}.chapter-photo img{max-height:38rem;object-fit:contain;background:var(--stock-alt)}figcaption{font-family:var(--f-data);font-size:.8rem;color:var(--muted);padding-top:.7rem}.photo-link{display:block}.photo-link:focus-visible{outline:3px solid var(--accent);outline-offset:4px}.hero-photo{margin-top:1rem}.journey-details summary{padding:1rem 1.25rem;font-family:var(--f-sign);cursor:pointer;border-top:1px solid var(--rule);min-height:48px}.journey-details summary span{float:right;color:var(--muted);font-family:var(--f-data);font-size:.75rem}.eyebrow,.stat dt,.field dt,.stay-label,.log h3{font-size:.75rem}.frame{margin:0}.car-btn{width:2.75rem;height:2.75rem}.car-btn:disabled{opacity:.35;cursor:default}.stats{margin:0}.photo-link img{transition:filter .2s}.photo-link:hover img{filter:brightness(1.04)}dialog{background:var(--stock);color:var(--ink);border:1px solid var(--rule);padding:1rem;width:min(96vw,90rem);max-width:96vw;max-height:96dvh}dialog::backdrop{background:rgba(0,0,0,.88)}dialog figure{margin:1rem 0}#viewer-image{display:block;width:100%;height:70dvh;object-fit:contain}.viewer-toolbar,.viewer-controls{display:flex;justify-content:space-between;align-items:center;gap:1rem;font-family:var(--f-data);font-size:.85rem}dialog button{background:var(--stock-alt);border:1px solid var(--rule);padding:.7rem 1rem;min-height:44px}button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}html.viewer-open{overflow:hidden}@media(max-width:46rem){.route{margin-bottom:2rem}.route a{padding:.6rem .75rem}.hero-photo img{aspect-ratio:4/3}.leg{gap:1.4rem}.ticket-head{align-items:flex-start;gap:.75rem}.leg-dates{white-space:normal}.journey-details summary span{float:none;display:block;margin-left:1rem}#viewer-image{height:62dvh}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.photo-link img{transition:none}}
 
-<div class="wrap">
-
-  <header class="masthead">
-    <p class="eyebrow">23 August – 3 September 2026 · Aaron Miller</p>
-    <h1>Twelve Days <span class="east">Eastward</span></h1>
-    <p class="dek">
-      One long push east from Chicago and then a slow walk back down the map:
-      four nights in Paris, a hop over the Alps to Florence, a fast train to Rome
-      for Shabbat in the Ghetto, and a 5:30 a.m. flight to Tel Aviv. Here is the
-      whole route, stop by stop, with the tickets that got me there.
-    </p>
-
-    <nav class="route" aria-label="Route">
-      <span class="stop"><code>ORD</code><span class="city">Chicago</span></span>
-      <span class="stop-arrow" aria-hidden="true">→</span>
-      <span class="stop"><code>CDG</code><span class="city">Paris</span></span>
-      <span class="stop-arrow" aria-hidden="true">→</span>
-      <span class="stop"><code>FLR</code><span class="city">Florence</span></span>
-      <span class="stop-arrow" aria-hidden="true">→</span>
-      <span class="stop"><code>ROM</code><span class="city">Rome</span></span>
-      <span class="stop-arrow" aria-hidden="true">→</span>
-      <span class="stop"><code>TLV</code><span class="city">Tel Aviv</span></span>
-      <span class="stop-arrow" aria-hidden="true">→</span>
-      <span class="stop"><code>ORD</code><span class="city">Home</span></span>
-    </nav>
-
-    <dl class="stats">
-      <div class="stat"><dt>Duration</dt><dd>12 <span>days</span></dd></div>
-      <div class="stat"><dt>Countries</dt><dd>4</dd></div>
-      <div class="stat"><dt>Cities</dt><dd>5</dd></div>
-      <div class="stat"><dt>Flights</dt><dd>4</dd></div>
-      <div class="stat"><dt>Trains</dt><dd>1</dd></div>
-      <div class="stat"><dt>Aeroplan</dt><dd>115k <span>pts</span></dd></div>
-    </dl>
-  </header>
-
-  <ol class="legs">
-
-    <!-- ============ LEG 1 · PARIS ============ -->
-    <li class="leg">
-      <div class="ticket">
-        <div class="ticket-head">
-          <div class="leg-name">
-            <span class="leg-no">LEG 01</span>
-            <h2>Paris</h2>
-          </div>
-          <span class="leg-dates">SUN 23 AUG – WED 26 AUG</span>
-        </div>
-        <div class="perf" role="presentation"></div>
-        <dl class="ticket-data">
-          <div class="field"><dt>Flight</dt><dd>UA 987</dd></div>
-          <div class="field"><dt>Route</dt><dd>ORD → CDG</dd></div>
-          <div class="field"><dt>Depart</dt><dd>23 AUG 18:10</dd></div>
-          <div class="field"><dt>Arrive</dt><dd>24 AUG 09:20</dd></div>
-          <div class="field"><dt>Aircraft</dt><dd>787-10</dd></div>
-          <div class="field"><dt>Block time</dt><dd>8h 10m</dd></div>
-          <div class="field"><dt>Record</dt><dd>BPFH7K</dd></div>
-        </dl>
-        <div class="perf" role="presentation"></div>
-        <div class="ticket-stay">
-          <p class="stay-label">Stay</p>
-          <dl class="ticket-data">
-            <div class="field"><dt>Host</dt><dd>Xavier</dd></div>
-            <div class="field"><dt>Nights</dt><dd>2</dd></div>
-            <div class="field"><dt>Where</dt><dd>Pompidou / Bastille</dd></div>
-            <div class="field"><dt>Check-in</dt><dd>24 AUG after 15:00</dd></div>
-            <div class="field"><dt>Checkout</dt><dd>26 AUG before 11:00</dd></div>
-          </dl>
-        </div>
-      </div>
-
-      <div class="leg-body">
-        <div class="narrative">
-          <p>
+.ticket-route{padding:.65rem 1.25rem;font-size:.85rem;color:var(--muted)}
+</style></head><body><a class="skip-link" href="#journey">Skip to journey</a>
+<nav aria-label="Route" class="route"><a href="#journey">Start</a><a href="#paris">Paris</a><a href="#florence">Florence</a><a href="#rome">Rome</a><a href="#israel">Israel</a><a href="#home">Home</a></nav><main class="wrap" id="journey">
+<header class="masthead">
+<p class="eyebrow">23 August – 3 September 2026 · Aaron Miller</p>
+<h1>Twelve Days <span class="east">Eastward</span></h1>
+<p class="dek">One long push east from Chicago and then a slow walk back down the map: two nights in Paris, a hop over the Alps to Florence, a fast train to Rome for Shabbat in the Ghetto, and a 5:30 a.m. flight to Tel Aviv. The route, stop by stop, in photographs and ticket stubs.</p>
+<dl class="stats">
+<div class="stat"><dt>Duration</dt><dd>12 <span>days</span></dd></div>
+<div class="stat"><dt>Trains</dt><dd>1</dd></div>
+<div class="stat"><dt>Aeroplan</dt><dd>115k <span>pts</span></dd></div>
+<div class="stat"><dt>Destination chapters</dt><dd>4</dd></div></dl>
+<figure class="hero-photo"><a aria-label="Enlarge: Florence, from above." class="photo-link" href="photos/web/skyline-1800.webp"><img alt="Florence, from above." data-full="photos/web/skyline-1800.webp" decoding="async" fetchpriority="high" height="720" loading="eager" sizes="(max-width: 720px) 100vw, 1088px" src="photos/web/skyline-960.webp" srcset="photos/web/skyline-480.webp 480w, photos/web/skyline-960.webp 960w, photos/web/skyline-1800.webp 1800w" width="960"/></a><figcaption>Florence, from above.</figcaption></figure></header>
+<ol class="legs">
+<!-- ============ LEG 1 · PARIS ============ -->
+<li class="leg" id="paris">
+<div class="ticket"><div class="ticket-head">
+<div class="leg-name">
+<span class="leg-no">LEG 01</span>
+<h2>Paris</h2>
+</div>
+<span class="leg-dates">SUN 23 AUG – WED 26 AUG</span>
+</div><p class="ticket-route mono">ORD → CDG</p><details class="journey-details"><summary>Journey details <span>Transport &amp; stay</span></summary>
+<div class="perf" role="presentation"></div>
+<dl class="ticket-data">
+<div class="field"><dt>Flight</dt><dd>UA 987</dd></div>
+<div class="field"><dt>Route</dt><dd>ORD → CDG</dd></div>
+<div class="field"><dt>Depart</dt><dd>23 AUG 18:10</dd></div>
+<div class="field"><dt>Arrive</dt><dd>24 AUG 09:20</dd></div>
+<div class="field"><dt>Aircraft</dt><dd>787-10</dd></div>
+<div class="field"><dt>Block time</dt><dd>8h 10m</dd></div>
+</dl>
+<div class="perf" role="presentation"></div>
+<div class="ticket-stay">
+<p class="stay-label">Stay</p>
+<dl class="ticket-data">
+<div class="field"><dt>Host</dt><dd>Xavier</dd></div>
+<div class="field"><dt>Nights</dt><dd>2</dd></div>
+<div class="field"><dt>Where</dt><dd>Pompidou / Bastille</dd></div>
+<div class="field"><dt>Check-in</dt><dd>24 AUG after 15:00</dd></div>
+<div class="field"><dt>Checkout</dt><dd>26 AUG before 11:00</dd></div>
+</dl>
+</div>
+</details></div><figure class="chapter-photo"><a aria-label="Enlarge: Inside Versailles" class="photo-link" href="photos/web/versailles-hall-1800.webp"><img alt="Inside Versailles" data-full="photos/web/versailles-hall-1800.webp" decoding="async" height="720" loading="lazy" sizes="(max-width: 720px) 100vw, 1088px" src="photos/web/versailles-hall-960.webp" srcset="photos/web/versailles-hall-480.webp 480w, photos/web/versailles-hall-960.webp 960w, photos/web/versailles-hall-1800.webp 1800w" width="960"/></a><figcaption>Inside Versailles</figcaption></figure>
+<div class="leg-body">
+<div class="narrative">
+<p>
             The overnight from O'Hare lands at Charles de Gaulle just after nine in the
             morning, which is the cruelest and best way to arrive in Paris — you get a
             whole extra day, you just have to stay upright for it. Terminal 1, a train
             into the city, keys to an apartment between the Pompidou and Bastille,
             and then straight into it.
           </p>
-          <p>
+<p>
             Two full days, run hard. The Louvre in a small group with reserved access,
             which is the only sane way to see the Mona Lisa in August. Then out to
             Versailles the next morning on an electric bike — the gardens are enormous
@@ -664,219 +634,207 @@
             estate, hameau and all. Dinners both nights, and one very Parisian evening
             at the Crazy Horse to close it out.
           </p>
-        </div>
-
-        <div class="log">
-          <h3>Chronology</h3>
-          <div class="entry">
-            <span class="entry-when">MON 24<br>15:45</span>
-            <span class="entry-what">
-              <b>VIP Louvre &amp; Mona Lisa Tour</b>
-              <small>Small group, reserved access. Meeting at the Arc de Triomphe du Carrousel, Place du Carrousel.</small>
-            </span>
-          </div>
-          <div class="entry">
-            <span class="entry-when">MON 24<br>20:30</span>
-            <span class="entry-what">
-              <b>Dinner — Le Bazar</b>
-              <small>25 Avenue de l'Europe, Levallois-Perret. Outside on the terrasse.</small>
-            </span>
-          </div>
-          <div class="entry">
-            <span class="entry-when">TUE 25<br>12:15</span>
-            <span class="entry-what">
-              <b>Versailles by electric bike</b>
-              <small>Half day, including Marie Antoinette's hamlet.</small>
-            </span>
-          </div>
-          <div class="entry">
-            <span class="entry-when">TUE 25<br>20:00</span>
-            <span class="entry-what">
-              <b>Dinner — Safrane</b>
-              <small>1 bis Rue des Colonels Renard, 17th arrondissement.</small>
-            </span>
-          </div>
-          <div class="entry">
-            <span class="entry-when">TUE 25<br>later</span>
-            <span class="entry-what">
-              <b>Crazy Horse Paris</b>
-              <small>Avenue George V. Booked from the dinner table, which is the correct way to do it.</small>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <section>
-        <div class="sheet-head">
-          <h3 class="eyebrow">Contact sheet — Paris</h3>
-          <span class="eyebrow">PAR / 7 frames</span>
-        </div>
-        <div class="carousel">
-          <button class="car-btn car-prev" type="button" aria-label="Previous photo" onclick="scrollSheet(this,-1)">‹</button>
-          <div class="sheet">
-            <figure class="frame"><img src="photos/par-01.jpg" alt="Moving walkway in CDG Terminal 1" loading="lazy"><figcaption>The walkway in, CDG Terminal 1</figcaption></figure>
-            <figure class="frame"><img src="photos/par-02.jpg" alt="Selfie in front of the Louvre pyramid" loading="lazy"><figcaption>At the pyramid, the Louvre</figcaption></figure>
-            <figure class="frame"><img src="photos/par-03.jpg" alt="The Louvre courtyard at Place du Carrousel" loading="lazy"><figcaption>Place du Carrousel</figcaption></figure>
-            <figure class="frame"><img src="photos/par-04.jpg" alt="The Grand Canal at Versailles" loading="lazy"><figcaption>The Grand Canal, Versailles</figcaption></figure>
-            <figure class="frame"><img src="photos/par-05.jpg" alt="Selfie by the lake at Marie Antoinette's hamlet" loading="lazy"><figcaption>The lake, Marie Antoinette's hamlet</figcaption></figure>
-            <figure class="frame"><img src="photos/par-06.jpg" alt="A dish at Bazar restaurant in Levallois-Perret" loading="lazy"><figcaption>Dinner at Bazar</figcaption></figure>
-            <figure class="frame"><img src="photos/par-07.jpg" alt="Watching the show at the Crazy Horse cabaret" loading="lazy"><figcaption>Mid-show, Crazy Horse</figcaption></figure>
-          </div>
-          <button class="car-btn car-next" type="button" aria-label="Next photo" onclick="scrollSheet(this,1)">›</button>
-        </div>
-      </section>
-    </li>
-
-    <!-- ============ LEG 2 · FLORENCE ============ -->
-    <li class="leg">
-      <div class="ticket">
-        <div class="ticket-head">
-          <div class="leg-name">
-            <span class="leg-no">LEG 02</span>
-            <h2>Florence</h2>
-          </div>
-          <span class="leg-dates">WED 26 AUG – FRI 28 AUG</span>
-        </div>
-        <div class="perf" role="presentation"></div>
-        <dl class="ticket-data">
-          <div class="field"><dt>Flight</dt><dd>VY 1503</dd></div>
-          <div class="field"><dt>Route</dt><dd>ORY → FLR</dd></div>
-          <div class="field"><dt>Depart</dt><dd>26 AUG 09:30</dd></div>
-          <div class="field"><dt>Arrive</dt><dd>26 AUG 11:20</dd></div>
-          <div class="field"><dt>Carrier</dt><dd>Vueling</dd></div>
-          <div class="field"><dt>Record</dt><dd>LMGZ6Q</dd></div>
-        </dl>
-        <div class="perf" role="presentation"></div>
-        <div class="ticket-stay">
-          <p class="stay-label">Stay</p>
-          <dl class="ticket-data">
-            <div class="field"><dt>Host</dt><dd>Lorenzo</dd></div>
-            <div class="field"><dt>Nights</dt><dd>2</dd></div>
-            <div class="field"><dt>Where</dt><dd>By the Fortezza da Basso</dd></div>
-            <div class="field"><dt>Check-in</dt><dd>26 AUG after 15:00</dd></div>
-            <div class="field"><dt>Checkout</dt><dd>28 AUG before 10:00</dd></div>
-          </dl>
-        </div>
-      </div>
-
-      <div class="leg-body">
-        <div class="narrative">
-          <p>
+</div>
+<div class="log">
+<h3>Chronology</h3>
+<div class="entry">
+<span class="entry-when">MON 24<br/>15:45</span>
+<span class="entry-what">
+<b>VIP Louvre &amp; Mona Lisa Tour</b>
+<small>Small group, reserved access. Meeting at the Arc de Triomphe du Carrousel, Place du Carrousel.</small>
+</span>
+</div>
+<div class="entry">
+<span class="entry-when">MON 24<br/>20:30</span>
+<span class="entry-what">
+<b>Dinner — Le Bazar</b>
+<small>25 Avenue de l'Europe, Levallois-Perret. Outside on the terrasse.</small>
+</span>
+</div>
+<div class="entry">
+<span class="entry-when">TUE 25<br/>12:15</span>
+<span class="entry-what">
+<b>Versailles by electric bike</b>
+<small>Half day, including Marie Antoinette's hamlet.</small>
+</span>
+</div>
+<div class="entry">
+<span class="entry-when">TUE 25<br/>20:00</span>
+<span class="entry-what">
+<b>Dinner — Safrane</b>
+<small>1 bis Rue des Colonels Renard, 17th arrondissement.</small>
+</span>
+</div>
+<div class="entry">
+<span class="entry-when">TUE 25<br/>later</span>
+<span class="entry-what">
+<b>Crazy Horse Paris</b>
+<small>Avenue George V. Booked from the dinner table, which is the correct way to do it.</small>
+</span>
+</div>
+</div>
+</div>
+<section>
+<div class="sheet-head">
+<h3 class="eyebrow">Contact sheet — Paris</h3>
+<span class="eyebrow">9 photographs</span>
+</div>
+<div class="carousel">
+<button aria-label="Previous photo" class="car-btn car-prev" onclick="scrollSheet(this,-1)" type="button">‹</button>
+<div class="sheet">
+<figure class="frame"><a aria-label="Enlarge: Moving walkway in CDG Terminal 1" class="photo-link" href="photos/web/par-01-1800.webp"><img alt="Moving walkway in CDG Terminal 1" data-full="photos/web/par-01-1800.webp" decoding="async" height="960" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/par-01-960.webp" srcset="photos/web/par-01-480.webp 360w, photos/web/par-01-960.webp 720w, photos/web/par-01-1800.webp 1350w" width="720"/></a><figcaption>The walkway in, CDG Terminal 1</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: Selfie in front of the Louvre pyramid" class="photo-link" href="photos/web/par-02-1800.webp"><img alt="Selfie in front of the Louvre pyramid" data-full="photos/web/par-02-1800.webp" decoding="async" height="720" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/par-02-960.webp" srcset="photos/web/par-02-480.webp 480w, photos/web/par-02-960.webp 960w, photos/web/par-02-1800.webp 1800w" width="960"/></a><figcaption>At the pyramid, the Louvre</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: The Louvre courtyard at Place du Carrousel" class="photo-link" href="photos/web/par-03-1800.webp"><img alt="The Louvre courtyard at Place du Carrousel" data-full="photos/web/par-03-1800.webp" decoding="async" height="720" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/par-03-960.webp" srcset="photos/web/par-03-480.webp 480w, photos/web/par-03-960.webp 960w, photos/web/par-03-1800.webp 1800w" width="960"/></a><figcaption>Place du Carrousel</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: The Grand Canal at Versailles" class="photo-link" href="photos/web/par-04-1800.webp"><img alt="The Grand Canal at Versailles" data-full="photos/web/par-04-1800.webp" decoding="async" height="960" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/par-04-960.webp" srcset="photos/web/par-04-480.webp 360w, photos/web/par-04-960.webp 720w, photos/web/par-04-1800.webp 1350w" width="720"/></a><figcaption>The Grand Canal, Versailles</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: Selfie by the lake at Marie Antoinette's hamlet" class="photo-link" href="photos/web/par-05-1800.webp"><img alt="Selfie by the lake at Marie Antoinette's hamlet" data-full="photos/web/par-05-1800.webp" decoding="async" height="720" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/par-05-960.webp" srcset="photos/web/par-05-480.webp 480w, photos/web/par-05-960.webp 960w, photos/web/par-05-1800.webp 1800w" width="960"/></a><figcaption>The lake, Marie Antoinette's hamlet</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: A dish at Bazar restaurant in Levallois-Perret" class="photo-link" href="photos/web/par-06-1800.webp"><img alt="A dish at Bazar restaurant in Levallois-Perret" data-full="photos/web/par-06-1800.webp" decoding="async" height="720" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/par-06-960.webp" srcset="photos/web/par-06-480.webp 480w, photos/web/par-06-960.webp 960w, photos/web/par-06-1800.webp 1800w" width="960"/></a><figcaption>Dinner at Bazar</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: Watching the show at the Crazy Horse cabaret" class="photo-link" href="photos/web/par-07-1800.webp"><img alt="Watching the show at the Crazy Horse cabaret" data-full="photos/web/par-07-1800.webp" decoding="async" height="720" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/par-07-960.webp" srcset="photos/web/par-07-480.webp 480w, photos/web/par-07-960.webp 960w, photos/web/par-07-1800.webp 1800w" width="960"/></a><figcaption>Mid-show, Crazy Horse</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: By the lake at Versailles" class="photo-link" href="photos/web/versailles-portrait-1800.webp"><img alt="By the lake at Versailles" data-full="photos/web/versailles-portrait-1800.webp" decoding="async" height="720" loading="lazy" sizes="(max-width: 720px) 100vw, 1088px" src="photos/web/versailles-portrait-960.webp" srcset="photos/web/versailles-portrait-480.webp 480w, photos/web/versailles-portrait-960.webp 960w, photos/web/versailles-portrait-1800.webp 1800w" width="960"/></a><figcaption>By the lake at Versailles</figcaption></figure><figure class="frame"><a aria-label="Enlarge: An afternoon by the Eiffel Tower" class="photo-link" href="photos/web/eiffel-portrait-1800.webp"><img alt="An afternoon by the Eiffel Tower" data-full="photos/web/eiffel-portrait-1800.webp" decoding="async" height="960" loading="lazy" sizes="(max-width: 720px) 100vw, 1088px" src="photos/web/eiffel-portrait-960.webp" srcset="photos/web/eiffel-portrait-480.webp 360w, photos/web/eiffel-portrait-960.webp 720w, photos/web/eiffel-portrait-1800.webp 1350w" width="720"/></a><figcaption>An afternoon by the Eiffel Tower</figcaption></figure></div>
+<button aria-label="Next photo" class="car-btn car-next" onclick="scrollSheet(this,1)" type="button">›</button>
+</div>
+</section>
+</li>
+<!-- ============ LEG 2 · FLORENCE ============ -->
+<li class="leg" id="florence">
+<div class="ticket"><div class="ticket-head">
+<div class="leg-name">
+<span class="leg-no">LEG 02</span>
+<h2>Florence</h2>
+</div>
+<span class="leg-dates">WED 26 AUG – FRI 28 AUG</span>
+</div><p class="ticket-route mono">ORY → FLR</p><details class="journey-details"><summary>Journey details <span>Transport &amp; stay</span></summary>
+<div class="perf" role="presentation"></div>
+<dl class="ticket-data">
+<div class="field"><dt>Flight</dt><dd>VY 1503</dd></div>
+<div class="field"><dt>Route</dt><dd>ORY → FLR</dd></div>
+<div class="field"><dt>Depart</dt><dd>26 AUG 09:30</dd></div>
+<div class="field"><dt>Arrive</dt><dd>26 AUG 11:20</dd></div>
+<div class="field"><dt>Carrier</dt><dd>Vueling</dd></div>
+</dl>
+<div class="perf" role="presentation"></div>
+<div class="ticket-stay">
+<p class="stay-label">Stay</p>
+<dl class="ticket-data">
+<div class="field"><dt>Host</dt><dd>Lorenzo</dd></div>
+<div class="field"><dt>Nights</dt><dd>2</dd></div>
+<div class="field"><dt>Where</dt><dd>By the Fortezza da Basso</dd></div>
+<div class="field"><dt>Check-in</dt><dd>26 AUG after 15:00</dd></div>
+<div class="field"><dt>Checkout</dt><dd>28 AUG before 10:00</dd></div>
+</dl>
+</div>
+</details></div><figure class="chapter-photo"><a aria-label="Enlarge: Reflections on the Arno, Florence" class="photo-link" href="photos/web/arno-1800.webp"><img alt="Reflections on the Arno, Florence" data-full="photos/web/arno-1800.webp" decoding="async" height="720" loading="lazy" sizes="(max-width: 720px) 100vw, 1088px" src="photos/web/arno-960.webp" srcset="photos/web/arno-480.webp 480w, photos/web/arno-960.webp 960w, photos/web/arno-1800.webp 1800w" width="960"/></a><figcaption>Reflections on the Arno, Florence</figcaption></figure>
+<div class="leg-body">
+<div class="narrative">
+<p>
             Out of Orly rather than Charles de Gaulle, over the Alps, and down into
             Florence before lunch. Florence airport is close enough to the centre that
             you can be standing in front of a Renaissance facade an hour after landing,
             which is exactly what happened.
           </p>
-          <p>
+<p>
             The city runs on timed entry now, so the day was built around a 13:30 slot:
             a 72-hour combined ticket for the Accademia and the Bargello. David in the
             afternoon, then Donatello and the sculpture courts.
           </p>
-          <p>
+<p>
             And then, at five, out of the city entirely — e-bikes up into the hills, which
             is where you finally understand the shape of the place. Florence sits in a
             bowl, and from above at golden hour the whole Renaissance skyline is one
             object: dome, tower, river, hills. Back down for dinner, a free day after
             that, and an early start on the third morning.
           </p>
-        </div>
-
-        <div class="log">
-          <h3>Chronology</h3>
-          <div class="entry">
-            <span class="entry-when">WED 26<br>09:30</span>
-            <span class="entry-what">
-              <b>Paris Orly → Florence</b>
-              <small>Vueling VY 1503. Boarding passes the night before.</small>
-            </span>
-          </div>
-          <div class="entry">
-            <span class="entry-when">WED 26<br>13:30</span>
-            <span class="entry-what">
-              <b>Accademia + Bargello</b>
-              <small>Florentine State Museums, 72-hour combined ticket, timed entry at 13:30.</small>
-            </span>
-          </div>
-          <div class="entry">
-            <span class="entry-when">WED 26<br>17:00</span>
-            <span class="entry-what">
-              <b>E-bikes through the Florentine hills</b>
-              <small>Two hours out of the city with Gabriele, back down at golden hour.</small>
-            </span>
-          </div>
-          <div class="entry">
-            <span class="entry-when">THU 27<br>all day</span>
-            <span class="entry-what">
-              <b>Florence on foot</b>
-              <small>The one unscheduled day of the trip, and the better for it.</small>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <section>
-        <div class="sheet-head">
-          <h3 class="eyebrow">Contact sheet — Florence</h3>
-          <span class="eyebrow">FLR / 7 frames</span>
-        </div>
-        <div class="carousel">
-          <button class="car-btn car-prev" type="button" aria-label="Previous photo" onclick="scrollSheet(this,-1)">‹</button>
-          <div class="sheet">
-            <figure class="frame"><img src="photos/flr-01.jpg" alt="Bus across the tarmac at Florence airport" loading="lazy"><figcaption>Touching down, Florence airport</figcaption></figure>
-            <figure class="frame"><img src="photos/flr-02.jpg" alt="Looking up at the Duomo facade" loading="lazy"><figcaption>The Duomo facade</figcaption></figure>
-            <figure class="frame"><img src="photos/flr-03.jpg" alt="Michelangelo's David at the Accademia" loading="lazy"><figcaption>David, at the Accademia</figcaption></figure>
-            <figure class="frame"><img src="photos/flr-04.jpg" alt="The piazza by the Bargello tower" loading="lazy"><figcaption>The piazza, by the Bargello</figcaption></figure>
-            <figure class="frame"><img src="photos/flr-05.jpg" alt="Ponte Vecchio at dusk" loading="lazy"><figcaption>Ponte Vecchio at dusk</figcaption></figure>
-            <figure class="frame"><img src="photos/flr-06.jpg" alt="Florence skyline from Piazzale Michelangelo" loading="lazy"><figcaption>The skyline, from Piazzale Michelangelo</figcaption></figure>
-            <figure class="frame"><img src="photos/flr-07.jpg" alt="Selfie in a bike helmet in the Tuscan hills" loading="lazy"><figcaption>Helmet on, e-bike in the hills</figcaption></figure>
-          </div>
-          <button class="car-btn car-next" type="button" aria-label="Next photo" onclick="scrollSheet(this,1)">›</button>
-        </div>
-      </section>
-    </li>
-
-    <!-- ============ LEG 3 · ROME ============ -->
-    <li class="leg">
-      <div class="ticket">
-        <div class="ticket-head">
-          <div class="leg-name">
-            <span class="leg-no">LEG 03</span>
-            <h2>Rome</h2>
-          </div>
-          <span class="leg-dates">FRI 28 AUG – MON 31 AUG</span>
-        </div>
-        <div class="perf" role="presentation"></div>
-        <dl class="ticket-data">
-          <div class="field"><dt>Service</dt><dd>Italo 8951</dd></div>
-          <div class="field"><dt>Route</dt><dd>Firenze S.M.N. → Roma</dd></div>
-          <div class="field"><dt>Depart</dt><dd>28 AUG 09:03</dd></div>
-          <div class="field"><dt>Arrive</dt><dd>28 AUG 11:05</dd></div>
-          <div class="field"><dt>Coach / seat</dt><dd>6 / 77</dd></div>
-          <div class="field"><dt>Class</dt><dd>Ambience Smart</dd></div>
-          <div class="field"><dt>Ticket</dt><dd>IYG5JI</dd></div>
-        </dl>
-        <div class="perf" role="presentation"></div>
-        <div class="ticket-stay">
-          <p class="stay-label">Stay</p>
-          <dl class="ticket-data">
-            <div class="field"><dt>Host</dt><dd>Andrea</dd></div>
-            <div class="field"><dt>Nights</dt><dd>3</dd></div>
-            <div class="field"><dt>Where</dt><dd>Campo de' Fiori / the Ghetto</dd></div>
-            <div class="field"><dt>Check-in</dt><dd>28 AUG after 16:00</dd></div>
-            <div class="field"><dt>Checkout</dt><dd>31 AUG before 10:00</dd></div>
-          </dl>
-        </div>
-      </div>
-
-      <div class="leg-body">
-        <div class="narrative">
-          <p>
+</div>
+<div class="log">
+<h3>Chronology</h3>
+<div class="entry">
+<span class="entry-when">WED 26<br/>09:30</span>
+<span class="entry-what">
+<b>Paris Orly → Florence</b>
+<small>Vueling VY 1503. Boarding passes the night before.</small>
+</span>
+</div>
+<div class="entry">
+<span class="entry-when">WED 26<br/>13:30</span>
+<span class="entry-what">
+<b>Accademia + Bargello</b>
+<small>Florentine State Museums, 72-hour combined ticket, timed entry at 13:30.</small>
+</span>
+</div>
+<div class="entry">
+<span class="entry-when">WED 26<br/>17:00</span>
+<span class="entry-what">
+<b>E-bikes through the Florentine hills</b>
+<small>Two hours out of the city with Gabriele, back down at golden hour.</small>
+</span>
+</div>
+<div class="entry">
+<span class="entry-when">THU 27<br/>all day</span>
+<span class="entry-what">
+<b>Florence on foot</b>
+<small>The one unscheduled day of the trip, and the better for it.</small>
+</span>
+</div>
+</div>
+</div>
+<section>
+<div class="sheet-head">
+<h3 class="eyebrow">Contact sheet — Florence</h3>
+<span class="eyebrow">7 photographs</span>
+</div>
+<div class="carousel">
+<button aria-label="Previous photo" class="car-btn car-prev" onclick="scrollSheet(this,-1)" type="button">‹</button>
+<div class="sheet">
+<figure class="frame"><a aria-label="Enlarge: Bus across the tarmac at Florence airport" class="photo-link" href="photos/web/flr-01-1800.webp"><img alt="Bus across the tarmac at Florence airport" data-full="photos/web/flr-01-1800.webp" decoding="async" height="720" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/flr-01-960.webp" srcset="photos/web/flr-01-480.webp 480w, photos/web/flr-01-960.webp 960w, photos/web/flr-01-1800.webp 1800w" width="960"/></a><figcaption>Touching down, Florence airport</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: Looking up at the Duomo facade" class="photo-link" href="photos/web/flr-02-1800.webp"><img alt="Looking up at the Duomo facade" data-full="photos/web/flr-02-1800.webp" decoding="async" height="960" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/flr-02-960.webp" srcset="photos/web/flr-02-480.webp 360w, photos/web/flr-02-960.webp 720w, photos/web/flr-02-1800.webp 1350w" width="720"/></a><figcaption>The Duomo facade</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: Michelangelo's David at the Accademia" class="photo-link" href="photos/web/flr-03-1800.webp"><img alt="Michelangelo's David at the Accademia" data-full="photos/web/flr-03-1800.webp" decoding="async" height="960" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/flr-03-960.webp" srcset="photos/web/flr-03-480.webp 360w, photos/web/flr-03-960.webp 720w, photos/web/flr-03-1800.webp 1350w" width="720"/></a><figcaption>David, at the Accademia</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: The piazza by the Bargello tower" class="photo-link" href="photos/web/flr-04-1800.webp"><img alt="The piazza by the Bargello tower" data-full="photos/web/flr-04-1800.webp" decoding="async" height="960" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/flr-04-960.webp" srcset="photos/web/flr-04-480.webp 360w, photos/web/flr-04-960.webp 720w, photos/web/flr-04-1800.webp 1350w" width="720"/></a><figcaption>The piazza, by the Bargello</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: Ponte Vecchio at dusk" class="photo-link" href="photos/web/flr-05-1800.webp"><img alt="Ponte Vecchio at dusk" data-full="photos/web/flr-05-1800.webp" decoding="async" height="720" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/flr-05-960.webp" srcset="photos/web/flr-05-480.webp 480w, photos/web/flr-05-960.webp 960w, photos/web/flr-05-1800.webp 1800w" width="960"/></a><figcaption>Ponte Vecchio at dusk</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: Florence skyline from Piazzale Michelangelo" class="photo-link" href="photos/web/flr-06-1800.webp"><img alt="Florence skyline from Piazzale Michelangelo" data-full="photos/web/flr-06-1800.webp" decoding="async" height="960" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/flr-06-960.webp" srcset="photos/web/flr-06-480.webp 360w, photos/web/flr-06-960.webp 720w, photos/web/flr-06-1800.webp 1350w" width="720"/></a><figcaption>The skyline, from Piazzale Michelangelo</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: Selfie in a bike helmet in the Tuscan hills" class="photo-link" href="photos/web/flr-07-1800.webp"><img alt="Selfie in a bike helmet in the Tuscan hills" data-full="photos/web/flr-07-1800.webp" decoding="async" height="720" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/flr-07-960.webp" srcset="photos/web/flr-07-480.webp 480w, photos/web/flr-07-960.webp 960w, photos/web/flr-07-1800.webp 1800w" width="960"/></a><figcaption>Helmet on, e-bike in the hills</figcaption></figure>
+</div>
+<button aria-label="Next photo" class="car-btn car-next" onclick="scrollSheet(this,1)" type="button">›</button>
+</div>
+</section>
+</li>
+<!-- ============ LEG 3 · ROME ============ -->
+<li class="leg" id="rome">
+<div class="ticket"><div class="ticket-head">
+<div class="leg-name">
+<span class="leg-no">LEG 03</span>
+<h2>Rome</h2>
+</div>
+<span class="leg-dates">FRI 28 AUG – MON 31 AUG</span>
+</div><p class="ticket-route mono">Firenze S.M.N. → Roma</p><details class="journey-details"><summary>Journey details <span>Transport &amp; stay</span></summary>
+<div class="perf" role="presentation"></div>
+<dl class="ticket-data">
+<div class="field"><dt>Service</dt><dd>Italo 8951</dd></div>
+<div class="field"><dt>Route</dt><dd>Firenze S.M.N. → Roma</dd></div>
+<div class="field"><dt>Depart</dt><dd>28 AUG 09:03</dd></div>
+<div class="field"><dt>Arrive</dt><dd>28 AUG 11:05</dd></div>
+<div class="field"><dt>Coach / seat</dt><dd>6 / 77</dd></div>
+<div class="field"><dt>Class</dt><dd>Ambience Smart</dd></div>
+</dl>
+<div class="perf" role="presentation"></div>
+<div class="ticket-stay">
+<p class="stay-label">Stay</p>
+<dl class="ticket-data">
+<div class="field"><dt>Host</dt><dd>Andrea</dd></div>
+<div class="field"><dt>Nights</dt><dd>3</dd></div>
+<div class="field"><dt>Where</dt><dd>Campo de' Fiori / the Ghetto</dd></div>
+<div class="field"><dt>Check-in</dt><dd>28 AUG after 16:00</dd></div>
+<div class="field"><dt>Checkout</dt><dd>31 AUG before 10:00</dd></div>
+</dl>
+</div>
+</details></div><figure class="chapter-photo"><a aria-label="Enlarge: The Colosseum, Rome" class="photo-link" href="photos/web/colosseum-1800.webp"><img alt="The Colosseum, Rome" data-full="photos/web/colosseum-1800.webp" decoding="async" height="720" loading="lazy" sizes="(max-width: 720px) 100vw, 1088px" src="photos/web/colosseum-960.webp" srcset="photos/web/colosseum-480.webp 480w, photos/web/colosseum-960.webp 960w, photos/web/colosseum-1800.webp 1800w" width="960"/></a><figcaption>The Colosseum, Rome</figcaption></figure>
+<div class="leg-body">
+<div class="narrative">
+<p>
             Two hours and two minutes, Florence to Rome, at nine in the morning. The
             Italo is the good way to do this — you leave one Renaissance city after
             breakfast and you're in an imperial one before noon, and the Tuscan
             countryside goes by the window at 300 kilometres an hour.
           </p>
-          <p>
+<p>
             It was a Friday, which set the shape of the whole stay. Into Termini before
             lunch, and then straight onto the back of a Vespa for an hour and three
             quarters through the city with a photographer riding along — the fastest
@@ -886,247 +844,242 @@
             exactly this in exactly this place for two thousand years. Rome for the
             weekend, and then the earliest alarm of the trip.
           </p>
-        </div>
-
-        <div class="log">
-          <h3>Chronology</h3>
-          <div class="entry">
-            <span class="entry-when">FRI 28<br>09:03</span>
-            <span class="entry-what">
-              <b>Florence → Rome by rail</b>
-              <small>Italo 8951, coach 6, seat 77. Into Roma Termini at 11:05.</small>
-            </span>
-          </div>
-          <div class="entry">
-            <span class="entry-when">FRI 28<br>15:00</span>
-            <span class="entry-what">
-              <b>Vespa tour of Rome, with a photographer</b>
-              <small>Until 16:45, with Vahid. There are professional pictures from this one.</small>
-            </span>
-          </div>
-          <div class="entry">
-            <span class="entry-when">FRI 28<br>19:30</span>
-            <span class="entry-what">
-              <b>Shabbat dinner — Ba' Ghetto</b>
-              <small>Via del Portico d'Ottavia 57, in the Jewish Ghetto. Glatt kosher.</small>
-            </span>
-          </div>
-          <div class="entry">
-            <span class="entry-when">SAT–SUN<br>29–30</span>
-            <span class="entry-what">
-              <b>Rome for the weekend</b>
-              <small>Shabbat in the Ghetto, then the city.</small>
-            </span>
-          </div>
-          <div class="entry">
-            <span class="entry-when">MON 31<br>03:00</span>
-            <span class="entry-what">
-              <b>Out to Fiumicino</b>
-              <small>For an 05:30 departure. No one enjoyed this part.</small>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <section>
-        <div class="sheet-head">
-          <h3 class="eyebrow">Contact sheet — Rome</h3>
-          <span class="eyebrow">ROM / 7 frames</span>
-        </div>
-        <div class="carousel">
-          <button class="car-btn car-prev" type="button" aria-label="Previous photo" onclick="scrollSheet(this,-1)">‹</button>
-          <div class="sheet">
-            <figure class="frame"><img src="photos/rom-01.jpg" alt="Columns of the Temple of Castor and Pollux in the Roman Forum" loading="lazy"><figcaption>The Roman Forum</figcaption></figure>
-            <figure class="frame"><img src="photos/rom-02.jpg" alt="A Rome shopping street at golden hour" loading="lazy"><figcaption>A backstreet, golden hour</figcaption></figure>
-            <figure class="frame"><img src="photos/rom-03.jpg" alt="Bernini's elephant obelisk at Piazza della Minerva" loading="lazy"><figcaption>Bernini's elephant, Piazza della Minerva</figcaption></figure>
-            <figure class="frame"><img src="photos/rom-04.jpg" alt="Interior of the Great Synagogue of Rome" loading="lazy"><figcaption>Inside the Great Synagogue</figcaption></figure>
-            <figure class="frame"><img src="photos/rom-05.jpg" alt="A plate of pasta at Ba' Ghetto" loading="lazy"><figcaption>Shabbat dinner, Ba' Ghetto</figcaption></figure>
-            <figure class="frame"><img src="photos/rom-06.jpg" alt="The Colosseum" loading="lazy"><figcaption>The Colosseum</figcaption></figure>
-            <figure class="frame"><img src="photos/rom-07.jpg" alt="A table in a Trastevere wine bar at night" loading="lazy"><figcaption>Trastevere after dark</figcaption></figure>
-          </div>
-          <button class="car-btn car-next" type="button" aria-label="Next photo" onclick="scrollSheet(this,1)">›</button>
-        </div>
-      </section>
-    </li>
-
-    <!-- ============ LEG 4 · ISRAEL ============ -->
-    <li class="leg">
-      <div class="ticket">
-        <div class="ticket-head">
-          <div class="leg-name">
-            <span class="leg-no">LEG 04</span>
-            <h2>Israel</h2>
-          </div>
-          <span class="leg-dates">MON 31 AUG – THU 3 SEP</span>
-        </div>
-        <div class="perf" role="presentation"></div>
-        <dl class="ticket-data">
-          <div class="field"><dt>Flight</dt><dd>W4 6041</dd></div>
-          <div class="field"><dt>Route</dt><dd>FCO T3 → TLV</dd></div>
-          <div class="field"><dt>Depart</dt><dd>31 AUG 05:30</dd></div>
-          <div class="field"><dt>Arrive</dt><dd>31 AUG 10:00</dd></div>
-          <div class="field"><dt>Seat</dt><dd>31A</dd></div>
-          <div class="field"><dt>Entry</dt><dd>ETA-IL approved</dd></div>
-          <div class="field"><dt>Record</dt><dd>PSH5HK</dd></div>
-        </dl>
-      </div>
-
-      <div class="leg-body">
-        <div class="narrative">
-          <p>
+</div>
+<div class="log">
+<h3>Chronology</h3>
+<div class="entry">
+<span class="entry-when">FRI 28<br/>09:03</span>
+<span class="entry-what">
+<b>Florence → Rome by rail</b>
+<small>Italo 8951, coach 6, seat 77. Into Roma Termini at 11:05.</small>
+</span>
+</div>
+<div class="entry">
+<span class="entry-when">FRI 28<br/>15:00</span>
+<span class="entry-what">
+<b>Vespa tour of Rome, with a photographer</b>
+<small>Until 16:45, with Vahid. There are professional pictures from this one.</small>
+</span>
+</div>
+<div class="entry">
+<span class="entry-when">FRI 28<br/>19:30</span>
+<span class="entry-what">
+<b>Shabbat dinner — Ba' Ghetto</b>
+<small>Via del Portico d'Ottavia 57, in the Jewish Ghetto. Glatt kosher.</small>
+</span>
+</div>
+<div class="entry">
+<span class="entry-when">SAT–SUN<br/>29–30</span>
+<span class="entry-what">
+<b>Rome for the weekend</b>
+<small>Shabbat in the Ghetto, then the city.</small>
+</span>
+</div>
+<div class="entry">
+<span class="entry-when">MON 31<br/>03:00</span>
+<span class="entry-what">
+<b>Out to Fiumicino</b>
+<small>For an 05:30 departure. No one enjoyed this part.</small>
+</span>
+</div>
+</div>
+</div>
+<section>
+<div class="sheet-head">
+<h3 class="eyebrow">Contact sheet — Rome</h3>
+<span class="eyebrow">7 photographs</span>
+</div>
+<div class="carousel">
+<button aria-label="Previous photo" class="car-btn car-prev" onclick="scrollSheet(this,-1)" type="button">‹</button>
+<div class="sheet">
+<figure class="frame"><a aria-label="Enlarge: Columns of the Temple of Castor and Pollux in the Roman Forum" class="photo-link" href="photos/web/rom-01-1800.webp"><img alt="Columns of the Temple of Castor and Pollux in the Roman Forum" data-full="photos/web/rom-01-1800.webp" decoding="async" height="960" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/rom-01-960.webp" srcset="photos/web/rom-01-480.webp 360w, photos/web/rom-01-960.webp 720w, photos/web/rom-01-1800.webp 1350w" width="720"/></a><figcaption>The Roman Forum</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: A Rome shopping street at golden hour" class="photo-link" href="photos/web/rom-02-1800.webp"><img alt="A Rome shopping street at golden hour" data-full="photos/web/rom-02-1800.webp" decoding="async" height="960" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/rom-02-960.webp" srcset="photos/web/rom-02-480.webp 360w, photos/web/rom-02-960.webp 720w, photos/web/rom-02-1800.webp 1350w" width="720"/></a><figcaption>A backstreet, golden hour</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: Bernini's elephant obelisk at Piazza della Minerva" class="photo-link" href="photos/web/rom-03-1800.webp"><img alt="Bernini's elephant obelisk at Piazza della Minerva" data-full="photos/web/rom-03-1800.webp" decoding="async" height="960" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/rom-03-960.webp" srcset="photos/web/rom-03-480.webp 360w, photos/web/rom-03-960.webp 720w, photos/web/rom-03-1800.webp 1350w" width="720"/></a><figcaption>Bernini's elephant, Piazza della Minerva</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: Interior of the Great Synagogue of Rome" class="photo-link" href="photos/web/rom-04-1800.webp"><img alt="Interior of the Great Synagogue of Rome" data-full="photos/web/rom-04-1800.webp" decoding="async" height="960" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/rom-04-960.webp" srcset="photos/web/rom-04-480.webp 360w, photos/web/rom-04-960.webp 720w, photos/web/rom-04-1800.webp 1350w" width="720"/></a><figcaption>Inside the Great Synagogue</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: A plate of pasta at Ba' Ghetto" class="photo-link" href="photos/web/rom-05-1800.webp"><img alt="A plate of pasta at Ba' Ghetto" data-full="photos/web/rom-05-1800.webp" decoding="async" height="720" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/rom-05-960.webp" srcset="photos/web/rom-05-480.webp 480w, photos/web/rom-05-960.webp 960w, photos/web/rom-05-1800.webp 1800w" width="960"/></a><figcaption>Shabbat dinner, Ba' Ghetto</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: The Colosseum" class="photo-link" href="photos/web/rom-06-1800.webp"><img alt="The Colosseum" data-full="photos/web/rom-06-1800.webp" decoding="async" height="720" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/rom-06-960.webp" srcset="photos/web/rom-06-480.webp 480w, photos/web/rom-06-960.webp 960w, photos/web/rom-06-1800.webp 1800w" width="960"/></a><figcaption>The Colosseum</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: A table in a Trastevere wine bar at night" class="photo-link" href="photos/web/rom-07-1800.webp"><img alt="A table in a Trastevere wine bar at night" data-full="photos/web/rom-07-1800.webp" decoding="async" height="960" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/rom-07-960.webp" srcset="photos/web/rom-07-480.webp 360w, photos/web/rom-07-960.webp 720w, photos/web/rom-07-1800.webp 1350w" width="720"/></a><figcaption>Trastevere after dark</figcaption></figure>
+</div>
+<button aria-label="Next photo" class="car-btn car-next" onclick="scrollSheet(this,1)" type="button">›</button>
+</div>
+</section>
+</li>
+<!-- ============ LEG 4 · ISRAEL ============ -->
+<li class="leg" id="israel">
+<div class="ticket"><div class="ticket-head">
+<div class="leg-name">
+<span class="leg-no">LEG 04</span>
+<h2>Israel</h2>
+</div>
+<span class="leg-dates">MON 31 AUG – THU 3 SEP</span>
+</div><p class="ticket-route mono">FCO T3 → TLV</p><details class="journey-details"><summary>Journey details <span>Transport &amp; stay</span></summary>
+<div class="perf" role="presentation"></div>
+<dl class="ticket-data">
+<div class="field"><dt>Flight</dt><dd>W4 6041</dd></div>
+<div class="field"><dt>Route</dt><dd>FCO T3 → TLV</dd></div>
+<div class="field"><dt>Depart</dt><dd>31 AUG 05:30</dd></div>
+<div class="field"><dt>Arrive</dt><dd>31 AUG 10:00</dd></div>
+<div class="field"><dt>Seat</dt><dd>31A</dd></div>
+<div class="field"><dt>Entry</dt><dd>ETA-IL approved</dd></div>
+</dl>
+</details></div>
+<div class="leg-body">
+<div class="narrative">
+<p>
             A 05:30 departure out of Fiumicino Terminal 3, seat 31A, wheels down at Ben
             Gurion at ten in the morning. Four and a half hours from the Roman Ghetto to
             Tel Aviv, which is a strange and good thing to think about at that altitude —
             the same story, the two ends of it, one morning apart.
           </p>
-          <p>
+<p>
             Three days at the far end of the map, and the real reason the whole route
             bent east in the first place. Everything before this was the long way round.
           </p>
-        </div>
-
-        <div class="log">
-          <h3>Chronology</h3>
-          <div class="entry">
-            <span class="entry-when">MON 31<br>05:30</span>
-            <span class="entry-what">
-              <b>Rome → Tel Aviv</b>
-              <small>Wizz Air W4 6041 out of Fiumicino Terminal 3.</small>
-            </span>
-          </div>
-          <div class="entry">
-            <span class="entry-when">MON 31<br>10:00</span>
-            <span class="entry-what">
-              <b>Ben Gurion</b>
-              <small>ETA-IL approved in advance, which made the arrival painless.</small>
-            </span>
-          </div>
-          <div class="entry">
-            <span class="entry-when">31 AUG –<br>2 SEP</span>
-            <span class="entry-what">
-              <b>Israel</b>
-              <small>Three days. The part of the trip that wasn't about the tickets.</small>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <section>
-        <div class="sheet-head">
-          <h3 class="eyebrow">Contact sheet — Israel</h3>
-          <span class="eyebrow">TLV / 7 frames</span>
-        </div>
-        <div class="carousel">
-          <button class="car-btn car-prev" type="button" aria-label="Previous photo" onclick="scrollSheet(this,-1)">‹</button>
-          <div class="sheet">
-            <figure class="frame"><img src="photos/tlv-01.jpg" alt="Boarding a Wizz Air flight at night at Fiumicino" loading="lazy"><figcaption>Boarding before dawn, Fiumicino</figcaption></figure>
-            <figure class="frame"><img src="photos/tlv-02.jpg" alt="A bright corridor in Ben Gurion Airport" loading="lazy"><figcaption>Ben Gurion, arrivals</figcaption></figure>
-            <figure class="frame"><img src="photos/tlv-03.jpg" alt="Holding pastries at a bakery counter" loading="lazy"><figcaption>The bakery counter</figcaption></figure>
-            <figure class="frame"><img src="photos/tlv-04.jpg" alt="The Western Wall lit up at night with the Dome of the Rock behind it" loading="lazy"><figcaption>The Western Wall, after dark</figcaption></figure>
-            <figure class="frame"><img src="photos/tlv-05.jpg" alt="Selfie on a Jerusalem street" loading="lazy"><figcaption>A Jerusalem street</figcaption></figure>
-            <figure class="frame"><img src="photos/tlv-06.jpg" alt="At an outdoor cafe with family" loading="lazy"><figcaption>Family, over coffee</figcaption></figure>
-            <figure class="frame"><img src="photos/tlv-07.jpg" alt="A child looking at the animals at the zoo" loading="lazy"><figcaption>A family day at the zoo</figcaption></figure>
-          </div>
-          <button class="car-btn car-next" type="button" aria-label="Next photo" onclick="scrollSheet(this,1)">›</button>
-        </div>
-      </section>
-    </li>
-
-    <!-- ============ LEG 5 · HOME ============ -->
-    <li class="leg">
-      <div class="ticket">
-        <div class="ticket-head">
-          <div class="leg-name">
-            <span class="leg-no">LEG 05</span>
-            <h2>Home</h2>
-          </div>
-          <span class="leg-dates">THU 3 SEP</span>
-        </div>
-        <div class="perf" role="presentation"></div>
-        <dl class="ticket-data">
-          <div class="field"><dt>Flight</dt><dd>LX 8</dd></div>
-          <div class="field"><dt>Route</dt><dd>ZRH → ORD T5</dd></div>
-          <div class="field"><dt>Depart</dt><dd>3 SEP 13:05</dd></div>
-          <div class="field"><dt>Arrive</dt><dd>3 SEP 15:55</dd></div>
-          <div class="field"><dt>Aircraft</dt><dd>777-300ER</dd></div>
-          <div class="field"><dt>Cabin / seat</dt><dd>Business / 07K</dd></div>
-          <div class="field"><dt>Gate</dt><dd>E23</dd></div>
-          <div class="field"><dt>Record</dt><dd>ACKRAO</dd></div>
-        </dl>
-      </div>
-
-      <div class="leg-body">
-        <div class="narrative">
-          <p>
+</div>
+<div class="log">
+<h3>Chronology</h3>
+<div class="entry">
+<span class="entry-when">MON 31<br/>05:30</span>
+<span class="entry-what">
+<b>Rome → Tel Aviv</b>
+<small>Wizz Air W4 6041 out of Fiumicino Terminal 3.</small>
+</span>
+</div>
+<div class="entry">
+<span class="entry-when">MON 31<br/>10:00</span>
+<span class="entry-what">
+<b>Ben Gurion</b>
+<small>ETA-IL approved in advance, which made the arrival painless.</small>
+</span>
+</div>
+<div class="entry">
+<span class="entry-when">31 AUG –<br/>2 SEP</span>
+<span class="entry-what">
+<b>Israel</b>
+<small>Three days. The part of the trip that wasn't about the tickets.</small>
+</span>
+</div>
+</div>
+</div>
+<section>
+<div class="sheet-head">
+<h3 class="eyebrow">Contact sheet — Israel</h3>
+<span class="eyebrow">7 photographs</span>
+</div>
+<div class="carousel">
+<button aria-label="Previous photo" class="car-btn car-prev" onclick="scrollSheet(this,-1)" type="button">‹</button>
+<div class="sheet">
+<figure class="frame"><a aria-label="Enlarge: Boarding a Wizz Air flight at night at Fiumicino" class="photo-link" href="photos/web/tlv-01-1800.webp"><img alt="Boarding a Wizz Air flight at night at Fiumicino" data-full="photos/web/tlv-01-1800.webp" decoding="async" height="720" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/tlv-01-960.webp" srcset="photos/web/tlv-01-480.webp 480w, photos/web/tlv-01-960.webp 960w, photos/web/tlv-01-1800.webp 1800w" width="960"/></a><figcaption>Boarding before dawn, Fiumicino</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: A bright corridor in Ben Gurion Airport" class="photo-link" href="photos/web/tlv-02-1800.webp"><img alt="A bright corridor in Ben Gurion Airport" data-full="photos/web/tlv-02-1800.webp" decoding="async" height="960" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/tlv-02-960.webp" srcset="photos/web/tlv-02-480.webp 360w, photos/web/tlv-02-960.webp 720w, photos/web/tlv-02-1800.webp 1350w" width="720"/></a><figcaption>Ben Gurion, arrivals</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: Holding pastries at a bakery counter" class="photo-link" href="photos/web/tlv-03-1800.webp"><img alt="Holding pastries at a bakery counter" data-full="photos/web/tlv-03-1800.webp" decoding="async" height="960" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/tlv-03-960.webp" srcset="photos/web/tlv-03-480.webp 360w, photos/web/tlv-03-960.webp 720w, photos/web/tlv-03-1800.webp 1350w" width="720"/></a><figcaption>The bakery counter</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: The Western Wall lit up at night with the Dome of the Rock behind it" class="photo-link" href="photos/web/tlv-04-1800.webp"><img alt="The Western Wall lit up at night with the Dome of the Rock behind it" data-full="photos/web/tlv-04-1800.webp" decoding="async" height="720" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/tlv-04-960.webp" srcset="photos/web/tlv-04-480.webp 480w, photos/web/tlv-04-960.webp 960w, photos/web/tlv-04-1800.webp 1800w" width="960"/></a><figcaption>The Western Wall, after dark</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: Selfie on a Jerusalem street" class="photo-link" href="photos/web/tlv-05-1800.webp"><img alt="Selfie on a Jerusalem street" data-full="photos/web/tlv-05-1800.webp" decoding="async" height="720" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/tlv-05-960.webp" srcset="photos/web/tlv-05-480.webp 480w, photos/web/tlv-05-960.webp 960w, photos/web/tlv-05-1800.webp 1800w" width="960"/></a><figcaption>A Jerusalem street</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: At an outdoor cafe with family" class="photo-link" href="photos/web/tlv-06-1800.webp"><img alt="At an outdoor cafe with family" data-full="photos/web/tlv-06-1800.webp" decoding="async" height="720" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/tlv-06-960.webp" srcset="photos/web/tlv-06-480.webp 480w, photos/web/tlv-06-960.webp 960w, photos/web/tlv-06-1800.webp 1800w" width="960"/></a><figcaption>Family, over coffee</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: A child looking at the animals at the zoo" class="photo-link" href="photos/web/tlv-07-1800.webp"><img alt="A child looking at the animals at the zoo" data-full="photos/web/tlv-07-1800.webp" decoding="async" height="720" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/tlv-07-960.webp" srcset="photos/web/tlv-07-480.webp 480w, photos/web/tlv-07-960.webp 960w, photos/web/tlv-07-1800.webp 1800w" width="960"/></a><figcaption>A family day at the zoo</figcaption></figure>
+</div>
+<button aria-label="Next photo" class="car-btn car-next" onclick="scrollSheet(this,1)" type="button">›</button>
+</div>
+</section>
+</li>
+<!-- ============ LEG 5 · HOME ============ -->
+<li class="leg" id="home">
+<div class="ticket"><div class="ticket-head">
+<div class="leg-name">
+<span class="leg-no">LEG 05</span>
+<h2>Home</h2>
+</div>
+<span class="leg-dates">THU 3 SEP</span>
+</div><p class="ticket-route mono">ZRH → ORD T5</p><details class="journey-details"><summary>Journey details <span>Transport &amp; stay</span></summary>
+<div class="perf" role="presentation"></div>
+<dl class="ticket-data">
+<div class="field"><dt>Flight</dt><dd>LX 8</dd></div>
+<div class="field"><dt>Route</dt><dd>ZRH → ORD T5</dd></div>
+<div class="field"><dt>Depart</dt><dd>3 SEP 13:05</dd></div>
+<div class="field"><dt>Arrive</dt><dd>3 SEP 15:55</dd></div>
+<div class="field"><dt>Aircraft</dt><dd>777-300ER</dd></div>
+<div class="field"><dt>Cabin / seat</dt><dd>Business / 07K</dd></div>
+<div class="field"><dt>Gate</dt><dd>E23</dd></div>
+</dl>
+</details></div>
+<div class="leg-body">
+<div class="narrative">
+<p>
             Home the long way, back through Europe: Zurich to Chicago, gate E23, nine
             hours and fifty minutes in seat 07K, and the clock running backwards the
             whole way. Depart Zurich at one in the afternoon, land at O'Hare Terminal 5
             at four — the one flight on the trip that gives the day back instead of
             taking it.
           </p>
-          <p>
-            Twelve days, four countries, five cities, and one ticket book's worth of
-            proof that it happened.
-          </p>
-        </div>
-
-        <div class="log">
-          <h3>Chronology</h3>
-          <div class="entry">
-            <span class="entry-when">THU 3<br>13:05</span>
-            <span class="entry-what">
-              <b>Zurich → Chicago</b>
-              <small>SWISS LX 8, Boeing 777-300ER, gate E23.</small>
-            </span>
-          </div>
-          <div class="entry">
-            <span class="entry-when">THU 3<br>15:55</span>
-            <span class="entry-what">
-              <b>O'Hare, Terminal 5</b>
-              <small>Nine hours and fifty minutes in the air, two hours and fifty on the clock.</small>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <section>
-        <div class="sheet-head">
-          <h3 class="eyebrow">Contact sheet — Home</h3>
-          <span class="eyebrow">HOME / 2 frames</span>
-        </div>
-        <div class="carousel">
-          <button class="car-btn car-prev" type="button" aria-label="Previous photo" onclick="scrollSheet(this,-1)">‹</button>
-          <div class="sheet">
-            <figure class="frame"><img src="photos/home-01.jpg" alt="A SWISS aircraft on the tarmac at Zurich airport" loading="lazy"><figcaption>SWISS on the tarmac, Zurich</figcaption></figure>
-            <figure class="frame"><img src="photos/home-02.jpg" alt="E.T. playing on the business class seatback screen" loading="lazy"><figcaption>E.T., seatback screen</figcaption></figure>
-          </div>
-          <button class="car-btn car-next" type="button" aria-label="Next photo" onclick="scrollSheet(this,1)">›</button>
-        </div>
-      </section>
-    </li>
-
-  </ol>
-
-  <footer class="colophon">
-    <span class="stamp">Route completed</span>
-    <h2>About this page</h2>
-    <p>
-      Every flight number, ticket code, seat and time on this page is taken from the
-      actual booking confirmations, and every photo in the contact sheets is a real
-      frame from the trip, picked and captioned after the fact.
-    </p>
-    <p class="mono" style="font-size:.6875rem; letter-spacing:.06em;">
+<p>Twelve days, four destination chapters, and one ticket book’s worth of proof that it happened.</p>
+</div>
+<div class="log">
+<h3>Chronology</h3>
+<div class="entry">
+<span class="entry-when">THU 3<br/>13:05</span>
+<span class="entry-what">
+<b>Zurich → Chicago</b>
+<small>SWISS LX 8, Boeing 777-300ER, gate E23.</small>
+</span>
+</div>
+<div class="entry">
+<span class="entry-when">THU 3<br/>15:55</span>
+<span class="entry-what">
+<b>O'Hare, Terminal 5</b>
+<small>Nine hours and fifty minutes in the air, two hours and fifty on the clock.</small>
+</span>
+</div>
+</div>
+</div>
+<section>
+<div class="sheet-head">
+<h3 class="eyebrow">Contact sheet — Home</h3>
+<span class="eyebrow">2 photographs</span>
+</div>
+<div class="carousel">
+<button aria-label="Previous photo" class="car-btn car-prev" onclick="scrollSheet(this,-1)" type="button">‹</button>
+<div class="sheet">
+<figure class="frame"><a aria-label="Enlarge: A SWISS aircraft on the tarmac at Zurich airport" class="photo-link" href="photos/web/home-01-1800.webp"><img alt="A SWISS aircraft on the tarmac at Zurich airport" data-full="photos/web/home-01-1800.webp" decoding="async" height="960" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/home-01-960.webp" srcset="photos/web/home-01-480.webp 360w, photos/web/home-01-960.webp 720w, photos/web/home-01-1800.webp 1350w" width="720"/></a><figcaption>SWISS on the tarmac, Zurich</figcaption></figure>
+<figure class="frame"><a aria-label="Enlarge: E.T. playing on the business class seatback screen" class="photo-link" href="photos/web/home-02-1800.webp"><img alt="E.T. playing on the business class seatback screen" data-full="photos/web/home-02-1800.webp" decoding="async" height="960" loading="lazy" sizes="(max-width: 600px) 78vw, 384px" src="photos/web/home-02-960.webp" srcset="photos/web/home-02-480.webp 360w, photos/web/home-02-960.webp 720w, photos/web/home-02-1800.webp 1350w" width="720"/></a><figcaption>E.T., seatback screen</figcaption></figure>
+</div>
+<button aria-label="Next photo" class="car-btn car-next" onclick="scrollSheet(this,1)" type="button">›</button>
+</div>
+</section>
+</li>
+</ol>
+<footer class="colophon">
+<span class="stamp">Route completed</span>
+<h2>About this page</h2>
+<p>The journey is recorded in booking details and photographs from the trip. Personal booking references have been omitted.</p>
+<p class="mono" style="font-size:.6875rem; letter-spacing:.06em;">
       ORD · CDG · ORY · FLR · FCO · TLV · ZRH · ORD — AUG–SEP 2026
     </p>
-  </footer>
-
-</div>
-
-<script>
-  function scrollSheet(btn, dir) {
-    var sheet = btn.parentElement.querySelector('.sheet');
-    var card = sheet.querySelector('.frame');
-    var amount = card ? card.getBoundingClientRect().width + 20 : sheet.clientWidth * 0.85;
-    sheet.scrollBy({ left: dir * amount, behavior: 'smooth' });
-  }
-</script>
+</footer>
+</main>
+<dialog aria-label="Photo viewer" id="photo-viewer"><div class="viewer-toolbar"><span aria-live="polite" id="photo-count"></span><button autofocus="" id="close-viewer" type="button">Close ×</button></div><figure><img alt="" id="viewer-image"/><figcaption id="viewer-caption"></figcaption></figure><div class="viewer-controls"><button aria-label="Previous photograph" id="prev-photo" type="button">← Previous</button><button aria-label="Next photograph" id="next-photo" type="button">Next →</button></div></dialog><script>const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+function scrollSheet(btn, dir) {
+ const sheet=btn.parentElement.querySelector('.sheet');
+ const card=sheet.querySelector('.frame');
+ sheet.scrollBy({left:dir*(card.getBoundingClientRect().width+parseFloat(getComputedStyle(sheet).gap)),behavior:reducedMotion.matches?'instant':'smooth'});
+}
+document.querySelectorAll('.carousel').forEach(car=>{
+ const sheet=car.querySelector('.sheet');
+ function update(){car.querySelector('.car-prev').disabled=sheet.scrollLeft<=1;car.querySelector('.car-next').disabled=sheet.scrollLeft+sheet.clientWidth>=sheet.scrollWidth-2;}
+ sheet.addEventListener('scroll',update,{passive:true});new ResizeObserver(update).observe(sheet);update();
+});
+const routeLinks=[...document.querySelectorAll('.route a')];
+const sections=routeLinks.map(a=>document.querySelector(a.getAttribute('href')));
+let scheduled=false;
+function updateRoute(){let active=0;sections.forEach((section,i)=>{if(section.getBoundingClientRect().top<=130)active=i;});routeLinks.forEach((a,i)=>{if(i===active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});scheduled=false;}
+window.addEventListener('scroll',()=>{if(!scheduled){requestAnimationFrame(updateRoute);scheduled=true;}},{passive:true});updateRoute();
+const viewer=document.querySelector('#photo-viewer');
+const links=[...document.querySelectorAll('.photo-link')];
+let current=0,opener=null;
+function showPhoto(i){current=(i+links.length)%links.length;const img=links[current].querySelector('img');const shown=document.querySelector('#viewer-image');shown.src=links[current].href;shown.alt=img.alt;document.querySelector('#viewer-caption').textContent=links[current].closest('figure').querySelector('figcaption').textContent;document.querySelector('#photo-count').textContent=`${current+1} / ${links.length}`;}
+links.forEach((a,i)=>a.addEventListener('click',e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();opener=a;showPhoto(i);viewer.showModal();document.documentElement.classList.add('viewer-open');}));
+document.querySelector('#close-viewer').addEventListener('click',()=>viewer.close());
+document.querySelector('#prev-photo').addEventListener('click',()=>showPhoto(current-1));
+document.querySelector('#next-photo').addEventListener('click',()=>showPhoto(current+1));
+viewer.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();showPhoto(current-1);}if(e.key==='ArrowRight'){e.preventDefault();showPhoto(current+1);}});
+viewer.addEventListener('close',()=>{document.documentElement.classList.remove('viewer-open');opener?.focus();});
+viewer.addEventListener('click',e=>{if(e.target===viewer){const r=viewer.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)viewer.close();}});
+</script></body></html>
